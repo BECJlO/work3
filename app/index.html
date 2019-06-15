@@ -129,6 +129,115 @@
         </div>
       </div>
     </header>
+    <section class="calc" id="calculator">
+      <div class="container">
+        <div class="row row-no-calc">
+          <div class="col-12 col-lg-6 col-xl-7">
+            <div class="bg_white">
+              <H1>Ремонт квартир<br/>в Москве и области
+                <SPAN>Предоплата — 0 руб.</SPAN>
+              </H1>
+              <UL class="banner_list">
+                <LI>Оплата ремонта — поэтапно по факту</LI>
+                <LI>Цена и сроки фиксируются 1 раз и не меняются</LI>
+                <LI>Гарантия на ремонт — до 3 лет</LI>
+              </UL>
+            </div>
+            <div class="calc_action position-relative d-none">
+              <div class="calc_action-content">
+                <H3>
+                  <SPAN>Скидка 23% </SPAN>на все сметы
+                </H3>
+                <P>В честь Дня защитника Отечества дарим до 23% скидки на все сметы, составленные до 25 февраля.</P>
+                <FORM class="col-12 p-0 calc_action-form" id="calc_action_form">
+                  <INPUT type="hidden"></INPUT>
+                  <INPUT class="calc_action-form-input" name="telefon_lida" placeholder="Ваш номер"></INPUT>
+                  <INPUT class="calc_action-form-btn" name="calc_action_submit" placeholder="Ваш номер" value="ПОЛУЧИТЬ СКИДКУ"></INPUT>
+                </FORM>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 col-xl-5">
+            <div class="calc_block">
+              <div class="row row-padding-calc">
+                <div class="col-12 position-relative">
+                  <div class="calc_action-img d-none"></div>
+                  <div class="calc_title"></div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <HEADER>
+                    <SPAN>1</SPAN>Какой ремонт?
+                  </HEADER>
+                  <div class="form-group calc_cont" id="calc_step1">
+                    <div class="custom-control custom-radio">
+                      <INPUT class="custom-control-input" type="radio" id="calc_cosm0" name="customRadio1" checked=""></INPUT>
+                      <LABEL class="custom-control-label" for="calc_cosm0">Косметический</LABEL>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <INPUT class="custom-control-input" type="radio" id="calc_cosm1" name="customRadio1"></INPUT>
+                      <LABEL class="custom-control-label" for="calc_cosm1">Капитальный</LABEL>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <INPUT class="custom-control-input" type="radio" id="calc_cosm2" name="customRadio1"></INPUT>
+                      <LABEL class="custom-control-label" for="calc_cosm2">Под ключ</LABEL>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <HEADER>
+                    <SPAN>2</SPAN>Тип жилья
+                  </HEADER>
+                  <div class="form-group calc_cont" id="calc_step2">
+                    <div class="custom-control custom-radio">
+                      <INPUT class="custom-control-input" type="radio" id="build_new" name="customRadio2" checked=""></INPUT>
+                      <LABEL class="custom-control-label" for="calc_cosm0">Новостройка</LABEL>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <INPUT class="custom-control-input" type="radio" id="build_old" name="customRadio2"></INPUT>
+                      <LABEL class="custom-control-label" for="calc_cosm1">Вторичка</LABEL>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <HEADER>
+                    <SPAN>3</SPAN>Общая площадь, м2
+                  </HEADER>
+                  <div class="form-group" id="calc_step3">
+                    <div class="text-center">
+                      <INPUT class="number calc_number" type="number" min="10" max="250" value="30" id="input_area"></INPUT>
+                    </div>
+                    <INPUT class="calc_range" type="range" min="10" max="250" step="1" value="30" id="input_range"></INPUT>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <HEADER>
+                    <SPAN>4</SPAN>Количество комнат
+                  </HEADER>
+                  <div class="btn-group btn-group-toggle calc_cont" data-toggle="buttons" id="btn_secondary">
+                    <LABEL class="btn btn-secondary active">
+                      <INPUT type="radio" name="options" id="option0" autocomplete="off" checked="checked">1</INPUT>
+                    </LABEL>
+                    <LABEL class="btn btn-secondary">
+                      <INPUT type="radio" name="options" id="option1" autocomplete="off">2</INPUT>
+                    </LABEL>
+                    <LABEL class="btn btn-secondary">
+                      <INPUT type="radio" name="options" id="option2" autocomplete="off">3+</INPUT>
+                    </LABEL>
+                    <LABEL class="btn btn-secondary">
+                      <INPUT type="radio" name="options" id="option3" autocomplete="off">студия</INPUT>
+                    </LABEL>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <P class="calc_action-check d-none">С учетом скидки 23%!</P>
+                  <BUTTON class="btn btn_popup" type="button" data-toggle="modal" data-target="#call_calc">Узнать стоимость</BUTTON>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="footer">
       <div class="container">
         <div class="footer__wrap">

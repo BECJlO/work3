@@ -3,6 +3,7 @@ include _assets/bemto/bemto
 
 include head/head
 include header/header
+include calculator/calculator
 include footer/footer
 
 
@@ -21,6 +22,10 @@ html(lang="ru")
 		+b.BODY.page
 			block header
 				+header()
+
+			block calculator
+				+calculator()
+			
 			block content
 				
 			block footer

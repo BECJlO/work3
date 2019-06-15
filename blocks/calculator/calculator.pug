@@ -1,0 +1,81 @@
+mixin calculator()
+  +b.SECTION.calc(id="calculator")
+    .container
+      .row.row-no-calc
+        .col-12.col-lg-6.col-xl-7
+          .bg_white
+            H1 Ремонт квартир
+              br
+              |в Москве и области
+              SPAN Предоплата — 0 руб.
+            UL.banner_list
+              LI Оплата ремонта — поэтапно по факту
+              LI Цена и сроки фиксируются 1 раз и не меняются
+              LI Гарантия на ремонт — до 3 лет
+          .calc_action.position-relative.d-none
+            .calc_action-content
+              H3
+                SPAN Скидка 23% 
+                |на все сметы
+              P В честь Дня защитника Отечества дарим до 23% скидки на все сметы, составленные до 25 февраля.
+              FORM.col-12.p-0.calc_action-form(id="calc_action_form")
+                INPUT(type="hidden")
+                INPUT.calc_action-form-input(name="telefon_lida", placeholder="Ваш номер")
+                INPUT.calc_action-form-btn(name="calc_action_submit", placeholder="Ваш номер", value="ПОЛУЧИТЬ СКИДКУ")
+        .col-12.col-lg-6.col-xl-5
+          .calc_block
+            .row.row-padding-calc
+              .col-12.position-relative
+                .calc_action-img.d-none
+                .calc_title
+              .col-12.col-md-6
+                HEADER
+                  SPAN 1
+                  |Какой ремонт?
+                .form-group.calc_cont(id="calc_step1")
+                  .custom-control.custom-radio
+                    INPUT.custom-control-input(type="radio", id="calc_cosm0", name="customRadio1", checked="")
+                    LABEL.custom-control-label(for="calc_cosm0") Косметический
+                  .custom-control.custom-radio
+                    INPUT.custom-control-input(type="radio", id="calc_cosm1", name="customRadio1")
+                    LABEL.custom-control-label(for="calc_cosm1") Капитальный
+                  .custom-control.custom-radio
+                    INPUT.custom-control-input(type="radio", id="calc_cosm2", name="customRadio1")
+                    LABEL.custom-control-label(for="calc_cosm2") Под ключ
+              .col-12.col-md-6
+                HEADER
+                  SPAN 2
+                  |Тип жилья
+                .form-group.calc_cont(id="calc_step2")
+                  .custom-control.custom-radio
+                    INPUT.custom-control-input(type="radio", id="build_new", name="customRadio2", checked="")
+                    LABEL.custom-control-label(for="calc_cosm0") Новостройка
+                  .custom-control.custom-radio
+                    INPUT.custom-control-input(type="radio", id="build_old", name="customRadio2")
+                    LABEL.custom-control-label(for="calc_cosm1") Вторичка
+              .col-12.col-md-6
+                HEADER
+                  SPAN 3
+                  |Общая площадь, м2
+                .form-group(id="calc_step3")
+                  .text-center
+                    INPUT.number.calc_number(type="number", min="10", max="250", value="30", id="input_area")
+                  INPUT.calc_range(type="range", min="10", max="250", step="1", value="30", id="input_range")
+              .col-12.col-md-6
+                HEADER
+                  SPAN 4
+                  |Количество комнат
+                .btn-group.btn-group-toggle.calc_cont(data-toggle="buttons", id="btn_secondary")
+                  LABEL.btn.btn-secondary.active
+                    INPUT(type="radio", name="options", id="option0", autocomplete="off", checked) 1
+                  LABEL.btn.btn-secondary
+                    INPUT(type="radio", name="options", id="option1", autocomplete="off") 2
+                  LABEL.btn.btn-secondary
+                    INPUT(type="radio", name="options", id="option2", autocomplete="off") 3+
+                  LABEL.btn.btn-secondary
+                    INPUT(type="radio", name="options", id="option3", autocomplete="off") студия
+              .col-12
+                P.calc_action-check.d-none С учетом скидки 23%!
+                BUTTON.btn.btn_popup(type="button", data-toggle="modal", data-target="#call_calc") Узнать стоимость
+
+
