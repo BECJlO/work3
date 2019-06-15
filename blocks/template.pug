@@ -4,6 +4,8 @@ include _assets/bemto/bemto
 include head/head
 include header/header
 include calculator/calculator
+include service/service
+include why_trust/why_trust
 include footer/footer
 
 
@@ -25,16 +27,21 @@ html(lang="ru")
 
 			block calculator
 				+calculator()
+
+			block service
+				+service()
+
+			block why_trust
+				+why_trust()
 			
 			block content
 				
-			block footer
-				+footer()
+			//- block footer
+			//- 	+footer()
 
 			block vendors
 				// build:js js/vendor.js
 				script(src="libs/bootstrap/dist/js/bootstrap.min.js")
-				script(src="libs/bootstrap/dist/js/bootstrap.min.js.map")
 				script(src="old/common.js")
 				script(src="old/common_new.js")
 				script(src="libs/bootstrap/dist/js/bootstrap.min.js.map")

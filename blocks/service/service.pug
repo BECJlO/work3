@@ -1,0 +1,165 @@
+mixin service()
+  +b.service(id="service")
+    .container-fluid.p-0
+      .title
+        H2 Услуги
+        P Мы делаем любой вид ремонта
+      .service_block(id="service_block1")
+        .row
+          .d-none.d-md-block.col-md-12.col-lg-7.img_block1
+            .slider_garant
+              DIV До 3 лет
+                br
+                |гарантии
+            .img_block
+              IMG(data-src="upload/service_1.jpg").img-fluid
+          .col-12.col-lg-5
+            .service_text
+              H3 Косметический ремонт
+              .service_block_1
+                .service_item
+                  HEADER(id="heading1")
+                    BUTTON(data-toggle="collapse", data-target="#service1", aria-expanded="true", aria-controls="collapseOne") Работы
+                  .collapse.show(id="service1", aria-labelledby="heading1", data-parent="#service_block_1")
+                    .serv_text
+                      UL.list
+                        LI Демонтажные работы
+                        LI Шпатлевка стен
+                        LI Грунтование пола и стен
+                        LI Устройство наливных полов
+                        LI Настил линолеума, ковролина
+                        LI Оклейка стен обоями
+                        LI Установка наличников и плинтусов
+                        LI Частичная замена электрики
+                        LI Устройство откосов из ПВХ, сендвич-панелей
+                      .cost
+                        P Стоимость работ:
+                          SPAN.price от 1 990 руб./м<sup>2</sup>
+                .service_item
+                  HEADER(id="heading2")
+                    BUTTON.collapsed.black_mat(data-toggle="collapse", data-target="#service2", aria-expanded="true", aria-controls="collapseOne") Черновые материалы
+                  .collapse(id="service2", aria-labelledby="heading2", data-parent="#service_block_1")
+                    .serv_text
+                      P.serv_text_1 *заказывая ремонт в нашей компании, Вы можете приобрести материалы самостоятельно или приобрести у нас
+                      UL.list
+                        LI Штукатурки
+                        LI Шпатлевки
+                        LI Провода
+                        LI Профили
+                        LI Жидкие гвозди
+                        LI Герметик
+                        LI Саморезы
+                        LI Биты, валики и т. п.
+                      .cost.d-none
+                        P Стоимость черновых материалов 
+                          SPAN.price от 615 руб./м<sup>2</sup>
+              BUTTON.btn(type="button", data-toggle="modal", data-target="#call_service1") Узнать стоимость
+      .service_block(id="service_block2")
+        .row
+          .col-12.col-lg-5.order_2
+            .service_text
+              H3 Капитальный ремонт
+              div(id="service_block_2")
+                .service_item
+                  HEADER(id="heading3")
+                    BUTTON(data-toggle="collapse" data-target="#service3" aria-expanded="true" aria-controls="collapseOne") Работы
+                  .collapse.show(id="service3" aria-labelledby="heading3" data-parent="#service_block_2")
+                    .serv_text
+                      UL.list
+                        LI Демонтажные работы
+                        LI Устройство стяжки
+                        LI Грунтование пола и стен
+                        LI Устройство наливных полов
+                        LI Кирпичная кладка
+                        LI Шпатлевка и штукатурка стен
+                        LI Настил линолеума, ковролин
+                        LI Оклейка стен обоями
+                        LI Монтаж натяжного потолка
+                        LI Укладка плитки на пол и на стены в ванной
+                        LI Установка реечного потолка в ванной
+                        LI Монтаж натяжного потолка во всех помещениях
+                        LI Электромонтажные работы и сантехнические работы
+                        LI Установка откосов, подоконников и карнизов
+                      .cost
+                        P Стоимость работ: 
+                          SPAN.price от 4 990 руб./м<sup>2</sup>
+                .service_item
+                  HEADER(id="heading4")
+                    BUTTON.collapsed.black_mat(data-toggle="collapse" data-target="#service4" aria-expanded="true" aria-controls="collapseOne") Черновые материалы
+                  .collapse(id="service4", aria-labelledby="heading4", data-parent="#service_block_2")
+                    .serv_text
+                      P.serv_text_1 *заказывая ремонт в нашей компании, Вы можете приобрести материалы самостоятельно или приобрести у нас
+                        UL.list
+                          LI Штукатурки и шпатлевки
+                          LI Трубы и провода
+                          LI Гипсокартон
+                          LI Профили
+                          LI Плиточные и обойные клеи
+                          LI Жидкие гвозди, герметик и саморезы
+                          LI Биты, валики и т. п.
+                        .cost.d-none
+                          P Стоимость черновых материалов 
+                            SPAN.price от 1 530 руб./м<sup>2</sup>
+              BUTTON.btn(type="button", data-toggle="modal", data-target="#call_service2") Узнать стоимость
+          .d-none.d-md-block.col-md-12.col-lg-7.img_block2
+            .slider_garant
+              DIV До 3 лет
+                br
+                | гарантии
+            .img_block
+              IMG(data-src="upload/service_2.jpg" alt="").img-fluid
+      .service_block(id="service_block3")
+        .row
+          .d-none.d-md-block.col-md-12.col-lg-7.img_block3
+            .slider_garant
+              DIV До 3 лет
+                br
+                | гарантии
+            .img_block
+              IMG(data-src="upload/service_3.jpg" alt="").img-fluid
+          .col-12.col-lg-5
+            .service_text
+              H3 Ремонт “Под ключ”
+              DIV(id="service_block_3")
+                .service_item
+                  HEADER(id="heading5")
+                    BUTTON(data-toggle="collapse", data-target="#service5", aria-expanded="true", aria-controls="collapseOne") Работы
+                  .collapse.show(id="service5" aria-labelledby="heading5" data-parent="#service_block_3")
+                    .serv_text
+                      UL.list 
+                        LI Демонтажные работы
+                        LI Устройство стяжки и гидроизоляция пола
+                        LI Шпатлевка и штукатурка сте
+                        LI Грунтование пола и стен
+                        LI Устройство наливных полов
+                        LI Кирпичная кладка
+                        LI Укладка подложки, ламината, настил линолеума, ковролина
+                        LI Оклейка стен обоями
+                        LI Монтаж натяжного потолка
+                        LI Укладка плитки на пол и на стены в ванной
+                        LI Установка реечного потолка в ванной
+                        LI Монтаж натяжного потолка во всех помещениях
+                        LI Электромонтажные работы и сантехнические работы
+                        LI Установка откосов, подоконников, отливов и карнизов
+                        LI Установка дверей
+                      .cost
+                        P Стоимость работ: 
+                          SPAN.price от 7 990 руб./м<sup>2</sup>
+                .service_item
+                  HEADER(id="heading6")
+                    BUTTON.collapsed.black_mat(data-toggle="collapse", data-target="#service6", aria-expanded="true", aria-controls="collapseOne") Черновые материалы
+                  .collapse(id="service6", aria-labelledby="heading6", data-parent="#service_block_3")
+                    .serv_text
+                      P.serv_text_1 *заказывая ремонт в нашей компании, Вы можете приобрести материалы самостоятельно или приобрести у нас
+                      UL.list
+                        LI Штукатурки и шпатлевки
+                        LI Трубы и провода
+                        LI Гипсокартон
+                        LI Профили
+                        LI Плиточные и обойные клеи
+                        LI Жидкие гвозди, герметик и саморезы
+                        LI Биты, валики и т. п.
+                      .cost.d-none
+                        P Стоимость черновых материалов 
+                          SPAN.price от 1 680 руб./м<sup>2</sup>
+              BUTTON.btn(type="button", data-toggle="modal", data-target="#call_service3") Узнать стоимость
