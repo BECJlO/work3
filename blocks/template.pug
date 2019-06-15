@@ -19,7 +19,8 @@ html(lang="ru")
 			})
 			
 		+b.BODY.page
-
+			block header
+				+header()
 			block content
 				
 			block footer
@@ -27,12 +28,11 @@ html(lang="ru")
 
 			block vendors
 				// build:js js/vendor.js
-				script(src="libs/bootstrap/dist/bootstrap-grid.min.css")
-				//- script( src="libs/fancybox/dist/jquery.fancybox.min.js")
-				//- script( src="libs/swiper/dist/js/swiper.min.js")
-				//- script( src="libs/intl-tel-input/build/js/utils.js")
-				//- script( src="libs/intl-tel-input/build/js/intlTelInput-jquery.min.js")
-				//- script( src="libs/parsleyjs/dist/parsley.min.js")
+				script(src="libs/bootstrap/dist/js/bootstrap.min.js")
+				script(src="libs/bootstrap/dist/js/bootstrap.min.js.map")
+				script(src="old/common.js")
+				script(src="old/common_new.js")
+				script(src="libs/bootstrap/dist/js/bootstrap.min.js.map")
 				// endbuild
 
 			block scripts

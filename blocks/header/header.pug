@@ -6,6 +6,58 @@ mixin header()
           +e.logo
             +e.A(href='#').logo-img
           +e.P.logo-text Работаем с 2009 года
-        +e.menu.col-12.col-md-12.col-lg-7
-          .d-none.d-lg-block
+        .col-12.col-md-12.col-lg-7.header__menu
+          NAV.d-none.d-lg-block
             +e.UL.menu-top
+              LI
+                A(href="" class="active") Квартира
+              LI
+                A(href="") Квартира в новостройке
+              LI
+                A(href="") Квартира в хрущевке
+              LI
+                A(href="") Черновой ремонт
+              LI
+                A(href="") Чистовой ремонт
+          NAV.navbar.navbar-expand-lg.navbar-light
+            BUTTON(type="button", data-toggle="collapse", data-target="#dropdown_menu", aria-expanded="false", aria-controls="dropdown_menu").navbar-toggler.collapsed
+              SPAN.icon-bar.top-bar
+              SPAN.icon-bar.middle-bar
+              SPAN.icon-bar.bottom-bar
+            .collapse.navbar-collapse(id="dropdown_menu")
+              UL.navbar-nav
+                LI.nav-item.d-lg-none
+                  SELECT(id="selectMenu")
+                    OPTION(value="", selected) Квартира
+                    OPTION(value="") Квартира в новостройке
+                    OPTION(value="") Квартира в хрущевке
+                    OPTION(value="") Черновой ремонт
+                    OPTION(value="") Чистовой ремонт
+                LI.nav-item
+                  A.nav-link.anchor(href="#service") Цены
+                LI.nav-item
+                  A.nav-link.anchor(href="#portfolio") Портфолио
+                LI.nav-item
+                  A.nav-link.anchor(href="#reviews") Отзывы
+                LI.nav-item
+                  A.nav-link.anchor(href="#action") Акция
+                LI.nav-item
+                  A.nav-link.anchor(href="#rassrochka") Рассрочка 0%
+                LI.nav-item
+                  A.nav-link.anchor(href="#faq") Как заказат
+                LI.nav-item
+                  A.nav-link.anchor(href="#contacts") Контакты
+        .d-none.d-md-block.col-md-8.col-lg-3
+          +e.contact
+            .row
+              .col-12.col-md-6.col-lg-12
+                +e.time
+                  SPAN 8:00-22:00 
+                  | без выходных
+                +e.phone.call_phone_1
+                  A(href="tel:74951279328")
+                    |7 (495) 127-93-28
+              .col-12.col-md-6.col-lg-12
+                .call-h.d-none.d-md-block
+                  +e.BUTTON.btn2.btn2(type="button" data-toggle="modal" data-target="#call_header")
+                    SPAN Заказать звонок

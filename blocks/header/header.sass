@@ -1,1 +1,200 @@
 .header
+  position: fixed
+  z-index: 50
+  left: 0
+  right: 0
+  top: -1px
+  padding: 15px 0
+  z-index: 50
+  -webkit-box-shadow: 0 0 5px transparent
+  box-shadow: 0 0 5px transparent
+  -webkit-transition: all .5s ease
+  transition: all .5s ease
+  background: #fff
+  &__logo
+    margin: 7px 0 0
+    &-img
+      max-width: 194px
+      height: 35px
+      display: block
+      background: url(../img/logo.png) 0 0 no-repeat
+      background-size: contain
+      margin: 5px 0 0
+      @media #{$sm}
+        height: 58px
+        margin: 4px 0 0
+    &-text
+      font: 12px/1 RubikRegular
+      margin: 9px 0 0 3px
+      @media #{$sm}
+        margin: 9px 0 0 6px
+  &__menu
+    -webkit-box-ordinal-group: 6
+    -webkit-order: 5
+    -ms-flex-order: 5
+    order: 5
+    margin: -60px 0 0
+    @media #{$md}
+      margin: 20px 0 0
+      order: 0
+      z-index: 5
+    & #dropdown_menu
+      margin: 50px 0 0
+      @media #{$md}
+        margin: 0
+.navbar
+  padding: 0
+  margin: 13px 0 0
+.navbar-toggler
+  margin: -10px 0 0 auto
+  padding: 10px
+.navbar-toggler .icon-bar
+  background: rgba(0,0,0,.3)
+  transform: rotate(0deg) translate(0px,0px)
+  transition: ease all .2s
+  display: block
+  width: 22px
+  height: 2px
+  border-radius: 1px
+.navbar-toggler .icon-bar+.icon-bar
+  margin-top: 5px
+.icon-bar:nth-child(2)
+  width: 22px
+  transition: ease all .2s
+.navbar-toggler:hover>.icon-bar:nth-child(2)
+  width: 22px
+  transition: ease all .2s
+.navbar-toggler:active>.icon-bar:nth-child(2)
+  width: 22px
+  transition: ease all .2s
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(1)
+  transform: rotate(45deg) translate(5px,5px)
+  transition: ease all .2s
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(2)
+  opacity: 0
+  transition: ease all .2s
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(3)
+  transform: rotate(-45deg) translate(5px,-5px)
+  transition: ease all .2s
+.navbar-collapse
+  justify-content: space-between
+  -webkit-box-pack: justify
+  -webkit-justify-content: space-between
+  -ms-flex-pack: justify
+.navbar-nav select
+  margin-bottom: 9px
+.nav-link,.nav-link:visited
+  font: 16px/1 RubikMedium
+  text-decoration: none
+  color: #171715!important
+  white-space: nowrap
+.nav-link:hover,.nav-link:focus,.nav-link.actt,.nav-link:visited:hover,.nav-link:visited:focus,.nav-link:visited.actt
+  text-decoration: underline
+  color: #FFA50E!important
+
+
+.navbar-expand-lg .navbar-nav
+  @media #{$md}
+    justify-content: space-evenly
+    margin: 0
+  @media #{$sm}
+    -webkit-box-pack: justify
+    -webkit-justify-content: space-between
+    -ms-flex-pack: justify
+    justify-content: space-between
+    width: 100%
+    max-width: 800px
+    -webkit-flex-wrap: wrap
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+
+
+.header__menu-top
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  width: 100%
+  margin: 0
+  flex-wrap: wrap
+  justify-content: space-between
+  align-self: center
+  @media #{$sm}
+    flex-wrap: nowrap
+  @media #{$md}
+    margin: -10px 0 0
+
+.header__menu-top li
+  margin: 0
+  align-self: center
+  font: 14px/1 RubikRegular
+  @media #{$sm}
+    margin: 0 5px
+    font-size: 16px
+
+
+.header__menu-top a,.header__menu-top a:visited
+  display: flex
+  justify-content: center
+  flex-direction: column
+  text-align: center
+  width: 100%
+  height: 32px
+  border-radius: 15px
+  background: #F8F8F8
+  color: #000
+  text-decoration: none
+  text-transform: uppercase
+  padding: 0 12px
+  font: 12px/1 RubikRegular
+
+
+.header__menu-top a:hover,.header__menu-top a:focus,.header__menu-top a.active
+  color: #fff
+  background: #00bfaf
+
+
+.header__contact
+  margin: 25px auto 0
+  font: 12px/1.2 RubikRegular
+  position: relative
+  z-index: 6
+  @media #{$md}
+    max-width: 215px
+    margin: -4px 0 0
+    float: right
+
+
+.header__contact .header__btn2
+  margin: 0 auto
+  @media #{$md}
+    margin: 12px 0 0
+
+.header__time
+  font: 14px/1.2 RubikRegular
+  color: #171715
+  margin: 1px 0 7px
+
+
+.header__time span
+  font: 14px/1.2 RubikBold
+
+
+.header__phone a,.header__phone a:visited
+  position: relative
+  font: 20px/1 RubikBold
+  color: #000
+  text-decoration: none
+
+
+.header__phone a:hover,
+.header__phone a:focus,
+.header__phone a:visited:hover,
+.header__phone a:visited:focus
+  text-decoration: underline
+
+
+
+
+
