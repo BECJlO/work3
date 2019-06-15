@@ -1,0 +1,41 @@
+include _assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" })
+
+include head/head
+include header/header
+include footer/footer
+
+
+
+doctype html
+html(lang="ru")
+
+	block head
+		head
+			+head({
+				"title": "Ремонт квартир под ключ в Москве и Московской области — Флагман ремонта",
+				"author": "Oleh Devolp",
+				"description": "Профессиональный ремонт квартир под ключ в Москве и области. Фиксированные сроки и стоимость, гарантия — 3 года!"
+			})
+			
+		+b.BODY.page
+
+			block content
+				
+			block footer
+				+footer()
+
+			block vendors
+				// build:js js/vendor.js
+				script(src="libs/bootstrap/dist/bootstrap-grid.min.css")
+				//- script( src="libs/fancybox/dist/jquery.fancybox.min.js")
+				//- script( src="libs/swiper/dist/js/swiper.min.js")
+				//- script( src="libs/intl-tel-input/build/js/utils.js")
+				//- script( src="libs/intl-tel-input/build/js/intlTelInput-jquery.min.js")
+				//- script( src="libs/parsleyjs/dist/parsley.min.js")
+				// endbuild
+
+			block scripts
+				// build:js js/main.js
+				script( src="js/main.js")
+				// endbuild

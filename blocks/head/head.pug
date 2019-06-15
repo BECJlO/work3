@@ -1,0 +1,34 @@
+mixin head(data)
+	title= data.title
+	meta(charset="utf-8")
+	
+	meta(content=data.author name="author")
+	meta(content=data.description name="description")
+	
+	meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	meta(name="HandheldFriendly" content="true")
+	meta(name="format-detection", content="telephone=no")
+	meta(content="IE=edge" http-equiv="X-UA-Compatible")
+	meta(name="msapplication-TileColor", content="#da532c")
+	meta(name="theme-color", content="#ffffff")
+
+	link(rel="manifest", href="favicon/site.webmanifest")
+	link(rel="mask-icon", href="favicon/safari-pinned-tab.svg", color="#5bbad5")
+	link(rel="shortcut icon", href="img/favicon/favicon.ico", type="image/x-icon")
+	link(rel="apple-touch-icon", href="img/favicon/apple-touch-icon.png")
+	link(rel="icon", type="image/png", sizes="32x32", href="favicon/favicon-32x32.png")
+	link(rel="icon", type="image/png", sizes="16x16", href="favicon/favicon-16x16.png")
+	link(rel="apple-touch-icon", sizes="180x180", href="favicon/apple-touch-icon.png")
+
+	// build:css css/vendor.css
+
+	// endbuild
+
+				<!--if lt IE 9
+			script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+			script(src='https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js')
+		-->
+	
+	// build:css css/main.css
+	link(rel="stylesheet", href="css/main.css")
+	// endbuild
