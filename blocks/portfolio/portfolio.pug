@@ -1,0 +1,149 @@
+mixin portfolio()
+  +b.SECTION.portfolio(id="portfolio")
+    .container
+      .title
+        H2 Примеры наших работ
+      UL.nav.nav-tabs.portfolio-main-filter.d-none.d-md-flex(id="portfolioMainTab" role="tablist")
+        LI.nav-item
+          A.nav-link.active(id="filter-1-tab" data-toggle="tab" href="#filter-1" role="tab" aria-controls="filter-1" aria-selected="true") Все
+        LI.nav-item
+          A.nav-link.active(id="filter-3-tab" data-toggle="tab" href="#filter-3" role="tab" aria-controls="filter-3" aria-selected="false") Косметический
+        LI.nav-item
+          A.nav-link.active(id="filter-2-tab" data-toggle="tab" href="#filter-2" role="tab" aria-controls="filter-2" aria-selected="false") Капитальный
+        LI.nav-item
+          A.nav-link.active(id="filter-4-tab" data-toggle="tab" href="#filter-4" role="tab" aria-controls="filter-4" aria-selected="false") Под ключ
+        LI.nav-item
+          A.nav-link.active(id="filter-5-tab" data-toggle="tab" href="#filter-5" role="tab" aria-controls="filter-5" aria-selected="false") Квартира
+        LI.nav-item
+          A.nav-link.active(id="filter-6-tab" data-toggle="tab" href="#filter-6" role="tab" aria-controls="filter-6" aria-selected="false") Комната
+        LI.nav-item
+          A.nav-link.active(id="filter-7-tab" data-toggle="tab" href="#filter-7" role="tab" aria-controls="filter-7" aria-selected="false") Ванная
+        LI.nav-item
+          A.nav-link.active(id="filter-8-tab" data-toggle="tab" href="#filter-8" role="tab" aria-controls="filter-8" aria-selected="false") Кухня
+      P.main-nav-text.d-block.d-md-none Выберите тип ремонта или помещение
+      SECTION.portfolio-select.main-select.d-md-none
+        OPTION.filter-1(value="filter-1") Все
+        OPTION.filter-2(value="filter-2") Косметический
+        OPTION.filter-3(value="filter-3") Капитальный
+        OPTION.filter-4(value="filter-4") Под ключ
+        OPTION.filter-5(value="filter-5") Квартира
+        OPTION.filter-6(value="filter-6") Комната
+        OPTION.filter-7(value="filter-7") Ванная
+        OPTION.filter-8(value="filter-8") Кухня
+      .portfolio-nav-block.d-none.d-md-block
+        UL.portfolio-nav.sub-menu-1(id="portfolioTab")
+          LI.filter-1.filter-4.filter-5.portfolio-nav-item
+            A.nav-link.active.show(id="sub-filter-1-tab" href="#sub-filter-1" role="tab" aria-controls="sub-filter-1" aria-selected="false") 68 м<sup>2</sup>
+          LI.filter-1.filter-4.filter-5.portfolio-nav-item
+            A.nav-link.active.show(id="sub-filter-29-tab" href="#sub-filter-29" role="tab" aria-controls="sub-filter-29" aria-selected="false") 62 м<sup>2</sup>
+          LI.filter-1.filter-4.filter-5.portfolio-nav-item
+            A.nav-link.active.show(id="sub-filter-2-tab" href="#sub-filter-2" role="tab" aria-controls="sub-filter-2" aria-selected="false") 42 м<sup>2</sup>
+          LI.filter-1.filter-4.filter-5.portfolio-nav-item
+            A.nav-link.active.show(id="sub-filter-3-tab" href="#sub-filter-3" role="tab" aria-controls="sub-filter-3" aria-selected="false") 53 м<sup>2</sup>
+          LI.filter-1.filter-4.filter-5.portfolio-nav-item
+            A.nav-link.active.show(id="sub-filter-4-tab" href="#sub-filter-4" role="tab" aria-controls="sub-filter-4" aria-selected="false") 96 м<sup>2</sup>
+          LI.filter-1.filter-4.filter-5.portfolio-nav-item
+            A.nav-link.active.show(id="sub-filter-5-tab" href="#sub-filter-5" role="tab" aria-controls="sub-filter-5" aria-selected="false") 54 м<sup>2</sup>
+          LI.filter-1.filter-4.filter-5.portfolio-nav-item
+            A.nav-link.active.show(id="sub-filter-6-tab" href="#sub-filter-6" role="tab" aria-controls="sub-filter-6" aria-selected="false") 73 м<sup>2</sup>
+      SELECT.portfolio-select.sub-select.d-md-none
+        OPTION.filter-1.filter-4.filter-5(value="sub-filter-1") 68 м<sup>2</sup>
+        OPTION.filter-1.filter-4.filter-5(value="sub-filter-29") 62 м<sup>2</sup>
+        OPTION.filter-1.filter-3.filter-5(value="sub-filter-2") 42 м<sup>2</sup>
+        OPTION.filter-1.filter-4.filter-5(value="sub-filter-3") 53 м<sup>2</sup>
+        OPTION.filter-1.filter-4.filter-5(value="sub-filter-4") 96 м<sup>2</sup>
+        OPTION.filter-1.filter-4.filter-5(value="sub-filter-5") 54 м<sup>2</sup>
+        OPTION.filter-1.filter-4.filter-5(value="sub-filter-6") 73 м<sup>2</sup>
+        OPTION.filter-1.filter-4.filter-5(value="sub-filter-7") 89 м<sup>2</sup>
+        OPTION.filter-1.filter-4.filter-5(value="sub-filter-8") 3 м<sup>2</sup>
+        OPTION.filter-1.filter-4.filter-5(value="sub-filter-9") 33 м<sup>2</sup>
+      .tab-content(id="myTabContent").portfolio-item
+        .tab-pane.fade.show.active(id="sub-filter-1", role="tabpanel", aria-labelledby="sub-filter-1-tab")
+          .portfolio-item-block
+            .row
+              .col-12.col-lg-7
+                .top-slider-overflow
+                  P.top-slider-overflow-address Мос. обл., г. Реутов, ул. Академика Челомея, д. 11
+                  P.top-slider-overflow-work-type Ремонт квартиры под ключ
+                  A(href="").top-slider-overflow-close
+                .portfolio-item-top-slider(id="slider-1")
+                  picture
+                    img.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/1.jpg" src="img/ajax-loader.gif")
+                  PICTURE
+                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/2.jpg" src="img/ajax-loader.gif")
+                  PICTURE
+                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/3.jpg" src="img/ajax-loader.gif")
+                  PICTURE
+                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/4.jpg" src="img/ajax-loader.gif")
+                  PICTURE
+                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/5.jpg" src="img/ajax-loader.gif")
+                  PICTURE
+                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/6.jpg" src="img/ajax-loader.gif")
+                  PICTURE
+                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/7.jpg" src="img/ajax-loader.gif")
+                .portfolio-item-bottom-slider.d-none.d-md-flex(id="sub-slider-1")
+                  PICTURE
+                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/1.jpg" src="img/ajax-loader-small.gif")
+                  PICTURE
+                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/2.jpg" src="img/ajax-loader-small.gif")
+                  PICTURE
+                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/3.jpg" src="img/ajax-loader-small.gif")
+                  PICTURE
+                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/4.jpg" src="img/ajax-loader-small.gif")
+                  PICTURE
+                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/5.jpg" src="img/ajax-loader-small.gif")
+                  PICTURE
+                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/6.jpg" src="img/ajax-loader-small.gif")
+                  PICTURE
+                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/7.jpg" src="img/ajax-loader-small.gif")
+              .col-12.col-lg-5
+                .portfolio-item-right-main
+                  .portfolio-item-right-top
+                    P.top-slider-overflow-address.d-md-none Мос. обл., г. Реутов, ул. Академика Челомея, д. 11
+                    P.top-slider-overflow-work-type.d-md-none Ремонт квартиры под ключ
+                    P.portfolio-item-right-top-blocks Цена: 473 000 &#8381;
+                    P.portfolio-item-right-top-blocks Площадь: 68 м<sup>2</sup>
+                    P.portfolio-item-right-top-blocks Срок: 87 дней
+                    P.portfolio-item-right-top-blocks Гарантия: 3 года
+                  .accordion.portfolio-item-top-accordion(id="accordionExample")
+                    .card
+                      .card-header(id="headingOne")
+                        H5.mb-0
+                          BUTTON.portfolio-item-accord-btn.toggled(type="button", data-toggle="collapse", data-target="#collapseOne", aria-expanded="false", aria-controls="collapseOne")
+                            SPAN
+                            |Проделанная работа
+                      .collapse.show(id="collapseOne", class="collapse show", aria-labelledby="headingOne", data-parent="#accordionExample")
+                        .card-body
+                          UL.work-list
+                            LI.work-list-item Грунтовка стен и пола
+                            LI.work-list-item Гидроизоляция пола смесью "Водостоп"
+                            LI.work-list-item Устройство наливного пола
+                            LI.work-list-item Штукатурка стен по маякам
+                            LI.work-list-item Шпатлевка стен
+                            LI.work-list-item Оклейка стен обоями
+                            LI.work-list-item Окраска стен
+                            LI.work-list-item Облицовка стен плиткой
+                            LI.work-list-item Укладка ламината и плитки на пол
+                            LI.work-list-item Разводка труб водоснабжения и канализации
+                            LI.work-list-item Установка сантехники
+                            LI.work-list-item Установка дверей
+                            LI.work-list-item Электромонтажные работы
+                            LI.work-list-item Закупка и доставка материалов
+                    .card
+                      .card-header(id="headingTwo")
+                        H5.mb-0
+                          BUTTON.portfolio-item-accord-btn.collapsed(type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseOne")
+                            SPAN Читать отзыв
+                      .collapse(id="collapseTwo", aria-labelledby="headingTwo", data-parent="#accordionExample")
+                        .card-body
+                          P.portfolio-item-review-author Алексей Замятин, заказчик
+                          P.portfolio-item-review-text Ремонт сделали супер! Очень доволен тем, как все прошло. Квартира в новостройке, мы долго к ремонту готовились, сделали дизайн-проект. Не были уверены, что все получится, но ваши мастера превзошли все наши ожидания. Особенно понравилось то, как сделали стык плитки и ламината в кухне - как в журналах видели, и у нас теперь так.
+                    .card
+                      .card-header(id="headingThree")
+                        H5.mb-0
+                          BUTTON.portfolio-item-accord-btn.collapsed(type="button", data-toggle="collapse", data-target="#collapseThree", aria-expanded="false", aria-controls="collapseThree")
+                            SPAN Особенности объекта
+                      .collapse(id="collapseThree", class="collapse", aria-labelledby="headingThree", data-parent="#accordionExample")
+                        .card-body
+                          P.portfolio-item-custom-text Какой то текст
+                  BUTTON.portfolio-btn(type="button", data-toggle="modal", data-target="#call_portf Хочу так же!")
