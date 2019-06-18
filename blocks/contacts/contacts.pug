@@ -1,0 +1,19 @@
+mixin contacts()
+  +b.SECTION(id="contacts").contacts
+    .container.d-md-flex.p-0
+      .col-12.col-md-6.col-lg-5.contacts_block
+        H2 Контакты
+        UL.contact_list
+          LI.contact_item
+            SPAN.contact_item-t
+              A(href="tel:74951279328") 7 (495) 127-93-28
+              P.contact_item-b с 8:00 до 22:00 без выходных
+          LI.contact_item
+            SPAN.contact_item-t Есть вопросы?
+            A(href="mailto:info@flagmanremonta.ru") info@flagmanremonta.ru
+          LI.contact_item
+            SPAN.contact_item-t Адрес
+            P.contact_item-b г. Москва, Алтуфьевское шоссе, 29Б
+        A(href="#").contact_link Вернуться к началу страницы
+      .col-12.col-md-6.col-lg-7.map_block
+        
