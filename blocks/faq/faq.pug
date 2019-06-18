@@ -1,0 +1,32 @@
+mixin faq()
+  +b.SECTION.faq(id="faq")
+    .container
+      .row
+        .col-12.col-lg-10.offset-lg-1
+        .row
+          .col-12
+            H2.faq-title
+          .col-12
+            UL.faq-list
+              LI.faq-list-text
+                P.faq-list-text
+                  SPAN 1.
+                  |Замер и смета
+              LI.faq-list-text
+                P.faq-list-text
+                  SPAN 2.
+                  |Договор
+              LI.faq-list-text
+                P.faq-list-text
+                  SPAN 3.
+                  |Ремонт
+              LI.faq-list-text
+                P.faq-list-text
+                  SPAN 4.
+                  |Сдача и гарантия
+          .col-12
+            H4.faq-help-title Выезд замерщика — это бесплатно и ни к чему вас не обязывает!
+            FORM(id="faq_form", action="#").faq-form
+              INPUT(type="tel", name="telefon_lida" placeholder="Ваш номер телефона" required).faq-form-input
+              INPUT(type="submit", name="faq-submit" value="ПЕРЕЗВОНИТЕ МНЕ").faq-form-btn
+
