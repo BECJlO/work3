@@ -3,49 +3,151 @@ mixin portfolio()
     .container
       .title
         H2 Примеры наших работ
-      UL.nav.nav-tabs.portfolio-main-filter.d-none.d-md-flex(id="portfolioMainTab" role="tablist")
-        LI.nav-item
-          A.nav-link.active(id="filter-1-tab" data-toggle="tab" href="#filter-1" role="tab" aria-controls="filter-1" aria-selected="true") Все
-        LI.nav-item
-          A.nav-link.active(id="filter-3-tab" data-toggle="tab" href="#filter-3" role="tab" aria-controls="filter-3" aria-selected="false") Косметический
-        LI.nav-item
-          A.nav-link.active(id="filter-2-tab" data-toggle="tab" href="#filter-2" role="tab" aria-controls="filter-2" aria-selected="false") Капитальный
-        LI.nav-item
-          A.nav-link.active(id="filter-4-tab" data-toggle="tab" href="#filter-4" role="tab" aria-controls="filter-4" aria-selected="false") Под ключ
-        LI.nav-item
-          A.nav-link.active(id="filter-5-tab" data-toggle="tab" href="#filter-5" role="tab" aria-controls="filter-5" aria-selected="false") Квартира
-        LI.nav-item
-          A.nav-link.active(id="filter-6-tab" data-toggle="tab" href="#filter-6" role="tab" aria-controls="filter-6" aria-selected="false") Комната
-        LI.nav-item
-          A.nav-link.active(id="filter-7-tab" data-toggle="tab" href="#filter-7" role="tab" aria-controls="filter-7" aria-selected="false") Ванная
-        LI.nav-item
-          A.nav-link.active(id="filter-8-tab" data-toggle="tab" href="#filter-8" role="tab" aria-controls="filter-8" aria-selected="false") Кухня
-      P.main-nav-text.d-block.d-md-none Выберите тип ремонта или помещение
-      SECTION.portfolio-select.main-select.d-md-none
-        OPTION.filter-1(value="filter-1") Все
-        OPTION.filter-2(value="filter-2") Косметический
-        OPTION.filter-3(value="filter-3") Капитальный
-        OPTION.filter-4(value="filter-4") Под ключ
-        OPTION.filter-5(value="filter-5") Квартира
-        OPTION.filter-6(value="filter-6") Комната
-        OPTION.filter-7(value="filter-7") Ванная
-        OPTION.filter-8(value="filter-8") Кухня
+      ul#portfolioMainTab.nav.nav-tabs.portfolio-main-filter.d-none.d-md-flex(role='tablist')
+        li.nav-item
+          a#filter-1-tab.nav-link.active(data-toggle='tab', href='#filter-1', role='tab', aria-controls='filter-1', aria-selected='true') Все
+        li.nav-item
+          a#filter-3-tab.nav-link(data-toggle='tab', href='#filter-3', role='tab', aria-controls='filter-3', aria-selected='false') Косметический
+        li.nav-item
+          a#filter-2-tab.nav-link(data-toggle='tab', href='#filter-2', role='tab', aria-controls='filter-2', aria-selected='false') Капитальный
+        li.nav-item
+          a#filter-4-tab.nav-link(data-toggle='tab', href='#filter-4', role='tab', aria-controls='filter-4', aria-selected='false') Под ключ
+        li.nav-item
+          a#filter-5-tab.nav-link(data-toggle='tab', href='#filter-5', role='tab', aria-controls='filter-5', aria-selected='false') Квартира
+        li.nav-item
+          a#filter-6-tab.nav-link(data-toggle='tab', href='#filter-6', role='tab', aria-controls='filter-6', aria-selected='false') Комната
+        li.nav-item
+          a#filter-7-tab.nav-link(data-toggle='tab', href='#filter-7', role='tab', aria-controls='filter-7', aria-selected='false') Ванная
+        li.nav-item
+          a#filter-8-tab.nav-link(data-toggle='tab', href='#filter-8', role='tab', aria-controls='filter-8', aria-selected='false') Кухня
+      p.main-nav-text.d-block.d-md-none Выберите тип ремонта или помещение
+      select.portfolio-select.main-select.d-md-none
+        option.filter-1(value='filter-1') Все
+        option.filter-3(value='filter-3') Косметический
+        option.filter-2(value='filter-2') Капитальный
+        option.filter-4(value='filter-4') Под ключ
+        option.filter-5(value='filter-5') Квартира
+        option.filter-6(value='filter-6') Комната
+        option.filter-7(value='filter-7') Ванная
+        option.filter-8(value='filter-8') Кухня
       .portfolio-nav-block.d-none.d-md-block
-        UL.portfolio-nav.sub-menu-1(id="portfolioTab")
-          LI.filter-1.filter-4.filter-5.portfolio-nav-item
-            A.nav-link.active.show(id="sub-filter-1-tab" href="#sub-filter-1" role="tab" aria-controls="sub-filter-1" aria-selected="false") 68 м<sup>2</sup>
-          LI.filter-1.filter-4.filter-5.portfolio-nav-item
-            A.nav-link.active.show(id="sub-filter-29-tab" href="#sub-filter-29" role="tab" aria-controls="sub-filter-29" aria-selected="false") 62 м<sup>2</sup>
-          LI.filter-1.filter-4.filter-5.portfolio-nav-item
-            A.nav-link.active.show(id="sub-filter-2-tab" href="#sub-filter-2" role="tab" aria-controls="sub-filter-2" aria-selected="false") 42 м<sup>2</sup>
-          LI.filter-1.filter-4.filter-5.portfolio-nav-item
-            A.nav-link.active.show(id="sub-filter-3-tab" href="#sub-filter-3" role="tab" aria-controls="sub-filter-3" aria-selected="false") 53 м<sup>2</sup>
-          LI.filter-1.filter-4.filter-5.portfolio-nav-item
-            A.nav-link.active.show(id="sub-filter-4-tab" href="#sub-filter-4" role="tab" aria-controls="sub-filter-4" aria-selected="false") 96 м<sup>2</sup>
-          LI.filter-1.filter-4.filter-5.portfolio-nav-item
-            A.nav-link.active.show(id="sub-filter-5-tab" href="#sub-filter-5" role="tab" aria-controls="sub-filter-5" aria-selected="false") 54 м<sup>2</sup>
-          LI.filter-1.filter-4.filter-5.portfolio-nav-item
-            A.nav-link.active.show(id="sub-filter-6-tab" href="#sub-filter-6" role="tab" aria-controls="sub-filter-6" aria-selected="false") 73 м<sup>2</sup>
+        ul#portfolioTab.portfolio-nav.sub-menu-1
+          li.filter-1.filter-4.filter-5.portfolio-nav-item
+            a#sub-filter-1-tab.nav-link.active.show(href='#sub-filter-1', role='tab', aria-controls='sub-filter-1', aria-selected='false')
+              | 68 м
+              sup 2
+          li.filter-1.filter-4.filter-5.portfolio-nav-item
+            a#sub-filter-29-tab.nav-link(href='#sub-filter-29', role='tab', aria-controls='sub-filter-29', aria-selected='false')
+              | 62 м
+              sup 2
+          li.filter-1.filter-3.filter-5.portfolio-nav-item
+            a#sub-filter-2-tab.nav-link(href='#sub-filter-2', role='tab', aria-controls='sub-filter-2', aria-selected='false')
+              | 42 м
+              sup 2
+          li.filter-1.filter-3.filter-5.portfolio-nav-item
+            a#sub-filter-3-tab.nav-link(href='#sub-filter-3', role='tab', aria-controls='sub-filter-3', aria-selected='false')
+              | 53 м
+              sup 2
+          li.filter-1.filter-4.filter-5.portfolio-nav-item
+            a#sub-filter-4-tab.nav-link(href='#sub-filter-4', role='tab', aria-controls='sub-filter-4', aria-selected='false')
+              | 96 м
+              sup 2
+          li.filter-1.filter-4.filter-5.portfolio-nav-item
+            a#sub-filter-5-tab.nav-link(href='#sub-filter-5', role='tab', aria-controls='sub-filter-5', aria-selected='false')
+              | 54 м
+              sup 2
+          li.filter-1.filter-4.filter-5.portfolio-nav-item
+            a#sub-filter-6-tab.nav-link(href='#sub-filter-6', role='tab', aria-controls='sub-filter-6', aria-selected='false')
+              | 73 м
+              sup 2
+          li.filter-1.filter-2.filter-5.portfolio-nav-item
+            a#sub-filter-7-tab.nav-link(href='#sub-filter-7', role='tab', aria-controls='sub-filter-7', aria-selected='false')
+              | 89 м
+              sup 2
+          li.filter-1.filter-4.filter-7.portfolio-nav-item
+            a#sub-filter-8-tab.nav-link(href='#sub-filter-8', role='tab', aria-controls='sub-filter-8', aria-selected='false')
+              | 3 м
+              sup 2
+          li.filter-1.filter-3.filter-6.portfolio-nav-item
+            a#sub-filter-9-tab.nav-link(href='#sub-filter-9', role='tab', aria-controls='sub-filter-9', aria-selected='false')
+              | 33 м
+              sup 2
+          li.filter-1.filter-3.filter-8.portfolio-nav-item
+            a#sub-filter-10-tab.nav-link(href='#sub-filter-10', role='tab', aria-controls='sub-filter-10', aria-selected='false')
+              | 8 м
+              sup 2
+          li.filter-1.filter-2.filter-7.portfolio-nav-item
+            a#sub-filter-11-tab.nav-link(href='#sub-filter-11', role='tab', aria-controls='sub-filter-11', aria-selected='false')
+              | 4 м
+              sup 2
+          li.filter-1.filter-2.filter-7.portfolio-nav-item
+            a#sub-filter-12-tab.nav-link(href='#sub-filter-12', role='tab', aria-controls='sub-filter-12', aria-selected='false')
+              | 56 м
+              sup 2
+          li.filter-1.filter-2.filter-8.portfolio-nav-item
+            a#sub-filter-13-tab.nav-link(href='#sub-filter-13', role='tab', aria-controls='sub-filter-13', aria-selected='false')
+              | 16 м
+              sup 2
+          li.filter-1.filter-2.filter-7.portfolio-nav-item
+            a#sub-filter-14-tab.nav-link(href='#sub-filter-14', role='tab', aria-controls='sub-filter-14', aria-selected='false')
+              | 44 м
+              sup 2
+          li.filter-1.filter-3.filter-5.portfolio-nav-item
+            a#sub-filter-15-tab.nav-link(href='#sub-filter-15', role='tab', aria-controls='sub-filter-15', aria-selected='false')
+              | 16 м
+              sup 2
+          li.filter-1.filter-2.filter-8.portfolio-nav-item
+            a#sub-filter-16-tab.nav-link(href='#sub-filter-16', role='tab', aria-controls='sub-filter-16', aria-selected='false')
+              | 8 м
+              sup 2
+          li.filter-1.filter-3.filter-5.portfolio-nav-item
+            a#sub-filter-17-tab.nav-link(href='#sub-filter-17', role='tab', aria-controls='sub-filter-17', aria-selected='false')
+              | 42 м
+              sup 2
+          li.filter-1.filter-4.filter-7.portfolio-nav-item
+            a#sub-filter-18-tab.nav-link(href='#sub-filter-18', role='tab', aria-controls='sub-filter-18', aria-selected='false')
+              | 5 м
+              sup 2
+          li.filter-1.filter-4.filter-7.portfolio-nav-item
+            a#sub-filter-19-tab.nav-link(href='#sub-filter-19', role='tab', aria-controls='sub-filter-19', aria-selected='false')
+              | 5 м
+              sup 2
+          li.filter-1.filter-2.filter-5.portfolio-nav-item
+            a#sub-filter-20-tab.nav-link(href='#sub-filter-20', role='tab', aria-controls='sub-filter-20', aria-selected='false')
+              | 13 м
+              sup 2
+          li.filter-1.filter-4.filter-7.portfolio-nav-item
+            a#sub-filter-21-tab.nav-link(href='#sub-filter-21', role='tab', aria-controls='sub-filter-21', aria-selected='false')
+              | 3 м
+              sup 2
+          li.filter-1.filter-4.filter-7.portfolio-nav-item
+            a#sub-filter-22-tab.nav-link(href='#sub-filter-22', role='tab', aria-controls='sub-filter-22', aria-selected='false')
+              | 5 м
+              sup 2
+          li.filter-1.filter-3.filter-6.portfolio-nav-item
+            a#sub-filter-23-tab.nav-link(href='#sub-filter-23', role='tab', aria-controls='sub-filter-23', aria-selected='false')
+              | 14 м
+              sup 2
+          li.filter-1.filter-2.filter-6.portfolio-nav-item
+            a#sub-filter-24-tab.nav-link(href='#sub-filter-24', role='tab', aria-controls='sub-filter-24', aria-selected='false')
+              | 14 м
+              sup 2
+          li.filter-1.filter-2.filter-5.portfolio-nav-item
+            a#sub-filter-25-tab.nav-link(href='#sub-filter-25', role='tab', aria-controls='sub-filter-25', aria-selected='false')
+              | 62 м
+              sup 2
+          li.filter-1.filter-4.filter-5.portfolio-nav-item
+            a#sub-filter-26-tab.nav-link(href='#sub-filter-26', role='tab', aria-controls='sub-filter-26', aria-selected='false')
+              | 33 м
+              sup 2
+          li.filter-1.filter-2.filter-8.portfolio-nav-item
+            a#sub-filter-27-tab.nav-link(href='#sub-filter-27', role='tab', aria-controls='sub-filter-27', aria-selected='false')
+              | 7 м
+              sup 2
+          li.filter-1.filter-3.filter-5.portfolio-nav-item
+            a#sub-filter-28-tab.nav-link(href='#sub-filter-28', role='tab', aria-controls='sub-filter-28', aria-selected='false')
+              | 45 м
+              sup 2
       SELECT.portfolio-select.sub-select.d-md-none
         OPTION.filter-1.filter-4.filter-5(value="sub-filter-1") 68 м<sup>2</sup>
         OPTION.filter-1.filter-4.filter-5(value="sub-filter-29") 62 м<sup>2</sup>
@@ -57,93 +159,98 @@ mixin portfolio()
         OPTION.filter-1.filter-4.filter-5(value="sub-filter-7") 89 м<sup>2</sup>
         OPTION.filter-1.filter-4.filter-5(value="sub-filter-8") 3 м<sup>2</sup>
         OPTION.filter-1.filter-4.filter-5(value="sub-filter-9") 33 м<sup>2</sup>
-      .tab-content(id="myTabContent").portfolio-item
-        .tab-pane.fade.show.active(id="sub-filter-1", role="tabpanel", aria-labelledby="sub-filter-1-tab")
+      #myTabContent.tab-content.portfolio-item
+        #sub-filter-1.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='sub-filter-1-tab')
           .portfolio-item-block
             .row
               .col-12.col-lg-7
                 .top-slider-overflow
-                  P.top-slider-overflow-address Мос. обл., г. Реутов, ул. Академика Челомея, д. 11
-                  P.top-slider-overflow-work-type Ремонт квартиры под ключ
-                  A(href="").top-slider-overflow-close
-                .portfolio-item-top-slider(id="slider-1")
+                  p.top-slider-overflow-address Мос. обл., г. Реутов, ул. Академика Челомея, д. 11
+                  p.top-slider-overflow-work-type Ремонт квартиры под ключ
+                  a.top-slider-overflow-close(href='#')
+                #slider-1.portfolio-item-top-slider
                   picture
-                    img.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/1.jpg" src="img/ajax-loader.gif")
-                  PICTURE
-                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/2.jpg" src="img/ajax-loader.gif")
-                  PICTURE
-                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/3.jpg" src="img/ajax-loader.gif")
-                  PICTURE
-                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/4.jpg" src="img/ajax-loader.gif")
-                  PICTURE
-                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/5.jpg" src="img/ajax-loader.gif")
-                  PICTURE
-                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/6.jpg" src="img/ajax-loader.gif")
-                  PICTURE
-                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/7.jpg" src="img/ajax-loader.gif")
-                .portfolio-item-bottom-slider.d-none.d-md-flex(id="sub-slider-1")
-                  PICTURE
-                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/1.jpg" src="img/ajax-loader-small.gif")
-                  PICTURE
-                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/2.jpg" src="img/ajax-loader-small.gif")
-                  PICTURE
-                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/3.jpg" src="img/ajax-loader-small.gif")
-                  PICTURE
-                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/4.jpg" src="img/ajax-loader-small.gif")
-                  PICTURE
-                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/5.jpg" src="img/ajax-loader-small.gif")
-                  PICTURE
-                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/6.jpg" src="img/ajax-loader-small.gif")
-                  PICTURE
-                    IMG.portfolio-item-img.img-responsive(data-src="upload/portfolio_n/project_1/photo_l/7.jpg" src="img/ajax-loader-small.gif")
+                    img.portfolio-item-img.img-responsive(data-src='upload/portfolio_n/project_1/photo_l/1.jpg', src='img/ajax-loader.gif')
+                  picture
+                    img.portfolio-item-img.img-responsive(data-src='upload/portfolio_n/project_1/photo_l/2.jpg', src='img/ajax-loader.gif')
+                  picture
+                    img.portfolio-item-img.img-responsive(data-src='upload/portfolio_n/project_1/photo_l/3.jpg', src='img/ajax-loader.gif')
+                  picture
+                    img.portfolio-item-img.img-responsive(data-src='upload/portfolio_n/project_1/photo_l/4.jpg', src='img/ajax-loader.gif')
+                  picture
+                    img.portfolio-item-img.img-responsive(data-src='upload/portfolio_n/project_1/photo_l/5.jpg', src='img/ajax-loader.gif')
+                  picture
+                    img.portfolio-item-img.img-responsive(data-src='upload/portfolio_n/project_1/photo_l/6.jpg', src='img/ajax-loader.gif')
+                  picture
+                    img.portfolio-item-img.img-responsive(data-src='upload/portfolio_n/project_1/photo_l/7.jpg', src='img/ajax-loader.gif')
+                #sub-slider-1.portfolio-item-bottom-slider.d-none.d-md-flex
+                  picture
+                    img.portfolio-item-img-sub.img-responsive(data-src='upload/portfolio_n/project_1/photo_l/1.jpg', src='img/ajax-loader-small.gif')
+                  picture
+                    img.portfolio-item-img-sub.img-responsive(data-src='upload/portfolio_n/project_1/photo_l/2.jpg', src='img/ajax-loader-small.gif')
+                  picture
+                    img.portfolio-item-img-sub.img-responsive(data-src='upload/portfolio_n/project_1/photo_l/3.jpg', src='img/ajax-loader-small.gif')
+                  picture
+                    img.portfolio-item-img-sub.img-responsive(data-src='upload/portfolio_n/project_1/photo_l/4.jpg', src='img/ajax-loader-small.gif')
+                  picture
+                    img.portfolio-item-img-sub.img-responsive(data-src='upload/portfolio_n/project_1/photo_l/5.jpg', src='img/ajax-loader-small.gif')
+                  picture
+                    img.portfolio-item-img-sub.img-responsive(data-src='upload/portfolio_n/project_1/photo_l/6.jpg', src='img/ajax-loader-small.gif')
+                  picture
+                    img.portfolio-item-img-sub.img-responsive(data-src='upload/portfolio_n/project_1/photo_l/7.jpg', src='img/ajax-loader-small.gif')
               .col-12.col-lg-5
                 .portfolio-item-right-main
                   .portfolio-item-right-top
-                    P.top-slider-overflow-address.d-md-none Мос. обл., г. Реутов, ул. Академика Челомея, д. 11
-                    P.top-slider-overflow-work-type.d-md-none Ремонт квартиры под ключ
-                    P.portfolio-item-right-top-blocks Цена: 473 000 &#8381;
-                    P.portfolio-item-right-top-blocks Площадь: 68 м<sup>2</sup>
-                    P.portfolio-item-right-top-blocks Срок: 87 дней
-                    P.portfolio-item-right-top-blocks Гарантия: 3 года
-                  .accordion.portfolio-item-top-accordion(id="accordionExample")
+                    p.top-slider-overflow-address.d-md-none Мос. обл., г. Реутов, ул. Академика Челомея, д. 11
+                    p.top-slider-overflow-work-type.d-md-none Ремонт квартиры под ключ
+                    p.portfolio-item-right-top-blocks Цена: 473 000 ₽
+                    p.portfolio-item-right-top-blocks
+                      | Площадь: 68 м
+                      sup 2
+                    p.portfolio-item-right-top-blocks Срок: 87 дней
+                    p.portfolio-item-right-top-blocks Гарантия: 3 года
+                  #accordionExample.accordion.portfolio-item-top-accordion
                     .card
-                      .card-header(id="headingOne")
-                        H5.mb-0
-                          BUTTON.portfolio-item-accord-btn.toggled(type="button", data-toggle="collapse", data-target="#collapseOne", aria-expanded="false", aria-controls="collapseOne")
-                            SPAN
-                            |Проделанная работа
-                      .collapse.show(id="collapseOne", class="collapse show", aria-labelledby="headingOne", data-parent="#accordionExample")
+                      #headingOne.card-header
+                        h5.mb-0
+                          button.portfolio-item-accord-btn.toggled(type='button', data-toggle='collapse', data-target='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
+                            span
+                            | Проделанная работа
+                      #collapseOne.collapse.show(aria-labelledby='headingOne', data-parent='#accordionExample')
                         .card-body
-                          UL.work-list
-                            LI.work-list-item Грунтовка стен и пола
-                            LI.work-list-item Гидроизоляция пола смесью "Водостоп"
-                            LI.work-list-item Устройство наливного пола
-                            LI.work-list-item Штукатурка стен по маякам
-                            LI.work-list-item Шпатлевка стен
-                            LI.work-list-item Оклейка стен обоями
-                            LI.work-list-item Окраска стен
-                            LI.work-list-item Облицовка стен плиткой
-                            LI.work-list-item Укладка ламината и плитки на пол
-                            LI.work-list-item Разводка труб водоснабжения и канализации
-                            LI.work-list-item Установка сантехники
-                            LI.work-list-item Установка дверей
-                            LI.work-list-item Электромонтажные работы
-                            LI.work-list-item Закупка и доставка материалов
+                          ul.work-list
+                            li.work-list-item Грунтовка стен и пола
+                            li.work-list-item Гидроизоляция пола смесью "Водостоп"
+                            li.work-list-item Устройство наливного пола
+                            li.work-list-item Штукатурка стен по маякам
+                            li.work-list-item Шпатлевка стен
+                            li.work-list-item Оклейка стен обоями
+                            li.work-list-item Окраска стен
+                            li.work-list-item Облицовка стен плиткой
+                            li.work-list-item Укладка ламината и плитки на пол
+                            li.work-list-item Разводка труб водоснабжения и канализации
+                            li.work-list-item Установка сантехники
+                            li.work-list-item Установка дверей
+                            li.work-list-item Электромонтажные работы
+                            li.work-list-item Закупка и доставка материалов
                     .card
-                      .card-header(id="headingTwo")
-                        H5.mb-0
-                          BUTTON.portfolio-item-accord-btn.collapsed(type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseOne")
-                            SPAN Читать отзыв
-                      .collapse(id="collapseTwo", aria-labelledby="headingTwo", data-parent="#accordionExample")
+                      #headingTwo.card-header
+                        h5.mb-0
+                          button.portfolio-item-accord-btn.collapsed(type='button', data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseOne')
+                            span
+                            | Читать отзыв
+                      #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordionExample')
                         .card-body
-                          P.portfolio-item-review-author Алексей Замятин, заказчик
-                          P.portfolio-item-review-text Ремонт сделали супер! Очень доволен тем, как все прошло. Квартира в новостройке, мы долго к ремонту готовились, сделали дизайн-проект. Не были уверены, что все получится, но ваши мастера превзошли все наши ожидания. Особенно понравилось то, как сделали стык плитки и ламината в кухне - как в журналах видели, и у нас теперь так.
+                          p.portfolio-item-review-author Алексей Замятин, заказчик
+                          p.portfolio-item-review-text
+                            | Ремонт сделали супер! Очень доволен тем, как все прошло. Квартира в новостройке, мы долго к ремонту готовились, сделали дизайн-проект. Не были уверены, что все получится, но ваши мастера превзошли все наши ожидания. Особенно понравилось то, как сделали стык плитки и ламината в кухне - как в журналах видели, и у нас теперь так.
                     .card
-                      .card-header(id="headingThree")
-                        H5.mb-0
-                          BUTTON.portfolio-item-accord-btn.collapsed(type="button", data-toggle="collapse", data-target="#collapseThree", aria-expanded="false", aria-controls="collapseThree")
-                            SPAN Особенности объекта
-                      .collapse(id="collapseThree", class="collapse", aria-labelledby="headingThree", data-parent="#accordionExample")
+                      #headingThree.card-header
+                        h5.mb-0
+                          button.portfolio-item-accord-btn.collapsed(type='button', data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                            span
+                            | Особенности объекта
+                      #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordionExample')
                         .card-body
-                          P.portfolio-item-custom-text Какой то текст
-                  BUTTON.portfolio-btn(type="button", data-toggle="modal", data-target="#call_portf Хочу так же!")
+                          p.portfolio-item-custom-text Какой то текст
+                  button.portfolio-btn(type='button', data-toggle='modal', data-target='#call_portf') Хочу так же!

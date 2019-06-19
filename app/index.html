@@ -20,9 +20,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png"/>
     <!-- build:css css/vendor.css-->
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css.map"/>
-    <link rel="stylesheet" href="old/old-main.min.css"/>
-    <link rel="stylesheet" href="old/old-style.min.css"/>
+    <link rel="stylesheet" href="libs/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" href="libs/slick-carousel/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="libs/old/old-main.min.css"/>
+    <link rel="stylesheet" href="libs/old/old-style.min.css"/>
     <!-- endbuild
     	<!--if lt IE 9
     script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
@@ -37,89 +38,54 @@
       <div class="container">
         <div class="row">
           <div class="col-7 col-md-3 col-lg-2">
-            <div class="header__logo"><a class="header__logo-img" href="#"></a>
+            <div class="logo-block"><a class="logo" href="#"></a>
+              <p>Работаем с 2009 года</p>
             </div>
-            <p class="header__logo-text">Работаем с 2009 года
-            </p>
           </div>
-          <div class="col-12 col-md-12 col-lg-7 header__menu">
-            <NAV class="d-none d-lg-block">
-              <ul class="header__menu-top">
-                <LI>
-                  <A class="active" href="">Квартира</A>
-                </LI>
-                <LI>
-                  <A href="">Квартира в новостройке</A>
-                </LI>
-                <LI>
-                  <A href="">Квартира в хрущевке</A>
-                </LI>
-                <LI>
-                  <A href="">Черновой ремонт</A>
-                </LI>
-                <LI>
-                  <A href="">Чистовой ремонт</A>
-                </LI>
+          <div class="col-12 col-md-12 col-lg-7 main-menu">
+            <div class="d-none d-lg-block">
+              <ul class="menu_top">
+                <li><a class="active" href="https://flagmanremonta.ru/" onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_s_kv','eNI':true, 'event': 'UAEvent' });">Квартира</a></li>
+                <li><a href="https://flagmanremonta.ru/novostroyki/" onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_s_kv-novostr','eNI':true, 'event': 'UAEvent' });">Квартира в новостройке</a></li>
+                <li><a href="https://flagmanremonta.ru/remont-hrushchevok/" onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_s_hrushchevoka','eNI':true, 'event': 'UAEvent' });">Квартира в хрущевке</a></li>
+                <li><a href="https://flagmanremonta.ru/remont-chernovoy/" onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_s_chernovoy','eNI':true, 'event': 'UAEvent' });">Черновой ремонт</a></li>
+                <li><a href="https://flagmanremonta.ru/remont-chistovoy/" onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_s_chistovoy','eNI':true, 'event': 'UAEvent' });">Чистовой ремонт</a></li>
               </ul>
-            </NAV>
-            <NAV class="navbar navbar-expand-lg navbar-light">
-              <BUTTON class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#dropdown_menu" aria-expanded="false" aria-controls="dropdown_menu">
-                <SPAN class="icon-bar top-bar"></SPAN>
-                <SPAN class="icon-bar middle-bar"></SPAN>
-                <SPAN class="icon-bar bottom-bar"></SPAN>
-              </BUTTON>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#dropdown_menu" aria-expanded="false" aria-controls="dropdown_menu"><span class="icon-bar top-bar"></span><span class="icon-bar middle-bar"></span><span class="icon-bar bottom-bar"></span></button>
               <div class="collapse navbar-collapse" id="dropdown_menu">
-                <UL class="navbar-nav">
-                  <LI class="nav-item d-lg-none">
-                    <SELECT id="selectMenu">
-                      <OPTION value="" selected="selected">Квартира</OPTION>
-                      <OPTION value="">Квартира в новостройке</OPTION>
-                      <OPTION value="">Квартира в хрущевке</OPTION>
-                      <OPTION value="">Черновой ремонт</OPTION>
-                      <OPTION value="">Чистовой ремонт</OPTION>
-                    </SELECT>
-                  </LI>
-                  <LI class="nav-item">
-                    <A class="nav-link anchor" href="#service">Цены</A>
-                  </LI>
-                  <LI class="nav-item">
-                    <A class="nav-link anchor" href="#portfolio">Портфолио</A>
-                  </LI>
-                  <LI class="nav-item">
-                    <A class="nav-link anchor" href="#reviews">Отзывы</A>
-                  </LI>
-                  <LI class="nav-item">
-                    <A class="nav-link anchor" href="#action">Акция</A>
-                  </LI>
-                  <LI class="nav-item">
-                    <A class="nav-link anchor" href="#rassrochka">Рассрочка 0%</A>
-                  </LI>
-                  <LI class="nav-item">
-                    <A class="nav-link anchor" href="#faq">Как заказат</A>
-                  </LI>
-                  <LI class="nav-item">
-                    <A class="nav-link anchor" href="#contacts">Контакты</A>
-                  </LI>
-                </UL>
+                <ul class="navbar-nav">
+                  <li class="nav-item d-lg-none">
+                    <select id="selectMenu">
+                      <option value="https://flagmanremonta.ru/" selected="">Квартира</option>
+                      <option value="https://flagmanremonta.ru/novostroyki/">Квартира в новостройке</option>
+                      <option value="https://flagmanremonta.ru/remont-hrushchevok/">Квартира в хрущевке</option>
+                      <option value="https://flagmanremonta.ru/remont-chernovoy/">Черновой ремонт</option>
+                      <option value="https://flagmanremonta.ru/remont-chistovoy/">Чистовой ремонт</option>
+                    </select>
+                  </li>
+                  <li class="nav-item"><a class="nav-link anchor" href="#service" onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_ceny','eNI':'true', 'event': 'UAEvent' });">Цены</a></li>
+                  <li class="nav-item"><a class="nav-link anchor" href="#portfolio" onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_portfolio','eNI':'true', 'event': 'UAEvent' });">Портфолио</a></li>
+                  <li class="nav-item"><a class="nav-link anchor" href="#reviews" onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_otzivy','eNI':'true', 'event': 'UAEvent' });">Отзывы</a></li>
+                  <li class="nav-item"><a class="nav-link anchor" href="#action" onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_akciya','eNI':'true', 'event': 'UAEvent' });">Акция</a></li>
+                  <li class="nav-item"><a class="nav-link anchor" href="#rassrochka" onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_rassrochka','eNI':'true', 'event': 'UAEvent' });">Рассрочка 0%</a></li>
+                  <li class="nav-item"><a class="nav-link anchor" href="#faq" onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_kak-zakazat','eNI':'true', 'event': 'UAEvent' });">Как заказать</a></li>
+                  <li class="nav-item"><a class="nav-link anchor" href="#contacts">Контакты</a></li>
+                </ul>
               </div>
-            </NAV>
+            </nav>
           </div>
           <div class="d-none d-md-block col-md-8 col-lg-3">
-            <div class="header__contact">
+            <div class="contact-h">
               <div class="row">
                 <div class="col-12 col-md-6 col-lg-12">
-                  <div class="header__time">
-                    <SPAN>8:00-22:00 </SPAN>без выходных
-                  </div>
-                  <div class="header__phone call_phone_1">
-                    <A href="tel:74951279328">7 (495) 127-93-28</A>
-                  </div>
+                  <div class="time"><span>8:00-22:00</span> без выходных</div>
+                  <div class="phone call_phone_1"><a href="tel:74951279328">7 (495) 127-93-28</a></div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-12">
                   <div class="call-h d-none d-md-block">
-                    <button class="header__btn2 btn2" type="button" data-toggle="modal" data-target="#call_header">
-                      <SPAN>Заказать звонок</SPAN>
-                    </button>
+                    <button class="btn2" type="button" data-toggle="modal" data-target="#call_header"><span>Заказать звонок</span></button>
                   </div>
                 </div>
               </div>
@@ -133,26 +99,38 @@
         <div class="row row-no-calc">
           <div class="col-12 col-lg-6 col-xl-7">
             <div class="bg_white">
-              <H1>Ремонт квартир<br/>в Москве и области
-                <SPAN>Предоплата — 0 руб.</SPAN>
-              </H1>
-              <UL class="banner_list">
-                <LI>Оплата ремонта — поэтапно по факту</LI>
-                <LI>Цена и сроки фиксируются 1 раз и не меняются</LI>
-                <LI>Гарантия на ремонт — до 3 лет</LI>
-              </UL>
+              <h1>Ремонт квартир<br/>в Москве и области<span>Предоплата — 0 руб.</span></h1>
+              <ul class="banner_list">
+                <li>Оплата ремонта — поэтапно по факту</li>
+                <li>Цена и сроки фиксируются 1 раз и не меняются</li>
+                <li>Гарантия на ремонт — до 3 лет</li>
+              </ul>
             </div>
             <div class="calc_action position-relative d-none">
               <div class="calc_action-content">
-                <H3>
-                  <SPAN>Скидка 23% </SPAN>на все сметы
-                </H3>
-                <P>В честь Дня защитника Отечества дарим до 23% скидки на все сметы, составленные до 25 февраля.</P>
-                <FORM class="col-12 p-0 calc_action-form" id="calc_action_form">
-                  <INPUT type="hidden"></INPUT>
-                  <INPUT class="calc_action-form-input" name="telefon_lida" placeholder="Ваш номер"></INPUT>
-                  <INPUT class="calc_action-form-btn" name="calc_action_submit" placeholder="Ваш номер" value="ПОЛУЧИТЬ СКИДКУ"></INPUT>
-                </FORM>
+                <h3><span>Скидка 23%</span> на все сметы!</h3>
+                <p>В честь Дня защитника Отечества дарим до 23% скидки на все сметы, составленные до 25 февраля.</p>
+                <form class="col-12 p-0 calc_action-form" id="calc_action_form" action="#">
+                  <input type="hidden" name="site_form_id" value="akciya-23fevralya_fs_skidka-23pr"/>
+                  <input type="hidden" name="comment" value="Заявка со скидкой 23%"/>
+                  <input type="hidden" name="sait" value="flagmanremonta.ru/index.php"/>
+                  <input type="hidden" name="1_referer" value=""/>
+                  <input type="hidden" name="ip_lida" value="37.115.92.82"/>
+                  <input type="hidden" name="utm_source" value=""/>
+                  <input type="hidden" name="utm_medium" value=""/>
+                  <input type="hidden" name="utm_campaign" value=""/>
+                  <input type="hidden" name="utm_term" value=""/>
+                  <input type="hidden" name="utm_content" value=""/>
+                  <input type="hidden" name="utm_keyword" value=""/>
+                  <input type="hidden" name="str_perehoda" value="flagmanremonta.ru/"/>
+                  <input type="hidden" name="metka" value=""/>
+                  <input type="hidden" name="ya_google" value=""/>
+                  <input type="hidden" name="marketdata" value=""/>
+                  <input type="hidden" name="utm" value=""/>
+                  <input type="hidden" name="istochnik" value="Реферал"/>
+                  <input class="calc_action-form-input" type="tel" name="telefon_lida" placeholder="Ваш номер телефона" required=""/>
+                  <input class="calc_action-form-btn" type="submit" name="calc_action_submit" value="ПОЛУЧИТЬ СКИДКУ"/>
+                </form>
               </div>
             </div>
           </div>
@@ -161,75 +139,69 @@
               <div class="row row-padding-calc">
                 <div class="col-12 position-relative">
                   <div class="calc_action-img d-none"></div>
-                  <div class="calc_title"></div>
+                  <div class="calc_title">Сколько стоит ваш ремонт?
+                    <p>Узнайте за 4 шага!</p>
+                  </div>
                 </div>
                 <div class="col-12 col-md-6">
-                  <HEADER>
-                    <SPAN>1</SPAN>Какой ремонт?
-                  </HEADER>
+                  <header><span>1</span>Какой ремонт?</header>
                   <div class="form-group calc_cont" id="calc_step1">
                     <div class="custom-control custom-radio">
-                      <INPUT class="custom-control-input" type="radio" id="calc_cosm0" name="customRadio1" checked=""></INPUT>
-                      <LABEL class="custom-control-label" for="calc_cosm0">Косметический</LABEL>
+                      <input class="custom-control-input" id="calc_cosm0" type="radio" name="customRadio1" checked=""/>
+                      <label class="custom-control-label" for="calc_cosm0">Косметический</label>
                     </div>
                     <div class="custom-control custom-radio">
-                      <INPUT class="custom-control-input" type="radio" id="calc_cosm1" name="customRadio1"></INPUT>
-                      <LABEL class="custom-control-label" for="calc_cosm1">Капитальный</LABEL>
+                      <input class="custom-control-input" id="calc_cosm1" type="radio" name="customRadio1"/>
+                      <label class="custom-control-label" for="calc_cosm1">Капитальный</label>
                     </div>
                     <div class="custom-control custom-radio">
-                      <INPUT class="custom-control-input" type="radio" id="calc_cosm2" name="customRadio1"></INPUT>
-                      <LABEL class="custom-control-label" for="calc_cosm2">Под ключ</LABEL>
+                      <input class="custom-control-input" id="calc_cosm2" type="radio" name="customRadio1"/>
+                      <label class="custom-control-label" for="calc_cosm2">Под ключ</label>
                     </div>
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
-                  <HEADER>
-                    <SPAN>2</SPAN>Тип жилья
-                  </HEADER>
+                  <header><span>2</span>Тип жилья</header>
                   <div class="form-group calc_cont" id="calc_step2">
                     <div class="custom-control custom-radio">
-                      <INPUT class="custom-control-input" type="radio" id="build_new" name="customRadio2" checked=""></INPUT>
-                      <LABEL class="custom-control-label" for="calc_cosm0">Новостройка</LABEL>
+                      <input class="custom-control-input" id="build_new" type="radio" name="customRadio2" checked=""/>
+                      <label class="custom-control-label" for="build_new">Новостройка</label>
                     </div>
                     <div class="custom-control custom-radio">
-                      <INPUT class="custom-control-input" type="radio" id="build_old" name="customRadio2"></INPUT>
-                      <LABEL class="custom-control-label" for="calc_cosm1">Вторичка</LABEL>
+                      <input class="custom-control-input" id="build_old" type="radio" name="customRadio2"/>
+                      <label class="custom-control-label" for="build_old">Вторичка</label>
                     </div>
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
-                  <HEADER>
-                    <SPAN>3</SPAN>Общая площадь, м2
-                  </HEADER>
+                  <header><span>3</span>Общая площадь, м2</header>
                   <div class="form-group" id="calc_step3">
                     <div class="text-center">
-                      <INPUT class="number calc_number" type="number" min="10" max="250" value="30" id="input_area"></INPUT>
+                      <input class="number calc_number" id="input_area" type="number" min="10" max="250" value="30"/>
                     </div>
-                    <INPUT class="calc_range" type="range" min="10" max="250" step="1" value="30" id="input_range"></INPUT>
+                    <input class="calc_range" id="input_range" type="range" min="10" max="250" step="1" value="30"/>
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
-                  <HEADER>
-                    <SPAN>4</SPAN>Количество комнат
-                  </HEADER>
-                  <div class="btn-group btn-group-toggle calc_cont" data-toggle="buttons" id="btn_secondary">
-                    <LABEL class="btn btn-secondary active">
-                      <INPUT type="radio" name="options" id="option0" autocomplete="off" checked="checked">1</INPUT>
-                    </LABEL>
-                    <LABEL class="btn btn-secondary">
-                      <INPUT type="radio" name="options" id="option1" autocomplete="off">2</INPUT>
-                    </LABEL>
-                    <LABEL class="btn btn-secondary">
-                      <INPUT type="radio" name="options" id="option2" autocomplete="off">3+</INPUT>
-                    </LABEL>
-                    <LABEL class="btn btn-secondary">
-                      <INPUT type="radio" name="options" id="option3" autocomplete="off">студия</INPUT>
-                    </LABEL>
+                  <header><span>4</span>Количество комнат</header>
+                  <div class="btn-group btn-group-toggle calc_cont" id="btn_secondary" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                      <input id="option0" type="radio" name="options" autocomplete="off" checked=""/> 1
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input id="option1" type="radio" name="options" autocomplete="off"/> 2
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input id="option2" type="radio" name="options" autocomplete="off"/> 3+
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input id="option3" type="radio" name="options" autocomplete="off"/> студия
+                    </label>
                   </div>
                 </div>
                 <div class="col-12">
-                  <P class="calc_action-check d-none">С учетом скидки 23%!</P>
-                  <BUTTON class="btn btn_popup" type="button" data-toggle="modal" data-target="#call_calc">Узнать стоимость</BUTTON>
+                  <p class="calc_action-check d-none">С учетом скидки 23%!</p>
+                  <button class="btn btn_popup" type="button" data-toggle="modal" data-target="#call_calc">Узнать стоимость</button>
                 </div>
               </div>
             </div>
@@ -237,78 +209,72 @@
         </div>
       </div>
     </section>
-    <div class="service" id="service">
+    <section class="service" id="service">
       <div class="container-fluid p-0">
         <div class="title">
-          <H2>Услуги</H2>
-          <P>Мы делаем любой вид ремонта</P>
+          <h2>Услуги</h2>
+          <p>Мы делаем любой вид ремонта</p>
         </div>
         <div class="service_block" id="service_block1">
           <div class="row">
             <div class="d-none d-md-block col-md-12 col-lg-7 img_block1">
               <div class="slider_garant">
-                <DIV>До 3 лет<br/>гарантии</DIV>
+                <div>До 3 лет<br/> гарантии</div>
               </div>
-              <div class="img_block">
-                <IMG class="img-fluid" data-src="upload/service_1.jpg"></IMG>
-              </div>
+              <div class="img_block"><img class="img-fluid" data-src="upload/service_1.jpg" alt=""/></div>
             </div>
             <div class="col-12 col-lg-5">
               <div class="service_text">
-                <H3>Косметический ремонт</H3>
-                <div class="service_block_1">
+                <h3>Косметический ремонт</h3>
+                <div id="service_block_1">
                   <div class="service_item">
-                    <HEADER id="heading1">
-                      <BUTTON data-toggle="collapse" data-target="#service1" aria-expanded="true" aria-controls="collapseOne">Работы</BUTTON>
-                    </HEADER>
+                    <header id="heading1">
+                      <button data-toggle="collapse" data-target="#service1" aria-expanded="true" aria-controls="collapseOne">Работы</button>
+                    </header>
                     <div class="collapse show" id="service1" aria-labelledby="heading1" data-parent="#service_block_1">
                       <div class="serv_text">
-                        <UL class="list">
-                          <LI>Демонтажные работы</LI>
-                          <LI>Шпатлевка стен</LI>
-                          <LI>Грунтование пола и стен</LI>
-                          <LI>Устройство наливных полов</LI>
-                          <LI>Настил линолеума, ковролина</LI>
-                          <LI>Оклейка стен обоями</LI>
-                          <LI>Установка наличников и плинтусов</LI>
-                          <LI>Частичная замена электрики</LI>
-                          <LI>Устройство откосов из ПВХ, сендвич-панелей</LI>
-                        </UL>
+                        <ul class="list">
+                          <li>Демонтажные работы</li>
+                          <li>Шпатлевка стен</li>
+                          <li>Грунтование пола и стен</li>
+                          <li>Устройство наливных полов</li>
+                          <li>Настил линолеума, ковролина</li>
+                          <li>Оклейка стен обоями</li>
+                          <li>Установка наличников и плинтусов</li>
+                          <li>Частичная замена электрики</li>
+                          <li>Устройство откосов из ПВХ, сендвич-панелей</li>
+                        </ul>
                         <div class="cost">
-                          <P>Стоимость работ:
-                            <SPAN class="price">от 1 990 руб./м<sup>2</sup></SPAN>
-                          </P>
+                          <p>Стоимость работ: <span class="price">от 1 990 руб./м<sup>2</sup></span></p>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="service_item">
-                    <HEADER id="heading2">
-                      <BUTTON class="collapsed black_mat" data-toggle="collapse" data-target="#service2" aria-expanded="true" aria-controls="collapseOne">Черновые материалы</BUTTON>
-                    </HEADER>
+                    <header id="heading2">
+                      <button class="collapsed black_mat" data-toggle="collapse" data-target="#service2" aria-expanded="true" aria-controls="collapseOne">Черновые материалы</button>
+                    </header>
                     <div class="collapse" id="service2" aria-labelledby="heading2" data-parent="#service_block_1">
                       <div class="serv_text">
-                        <P class="serv_text_1">*заказывая ремонт в нашей компании, Вы можете приобрести материалы самостоятельно или приобрести у нас</P>
-                        <UL class="list">
-                          <LI>Штукатурки</LI>
-                          <LI>Шпатлевки</LI>
-                          <LI>Провода</LI>
-                          <LI>Профили</LI>
-                          <LI>Жидкие гвозди</LI>
-                          <LI>Герметик</LI>
-                          <LI>Саморезы</LI>
-                          <LI>Биты, валики и т. п.</LI>
-                        </UL>
+                        <p class="serv_text_1">* заказывая ремонт в нашей компании, Вы можете приобрести материалы самостоятельно или приобрести у нас</p>
+                        <ul class="list">
+                          <li>Штукатурки</li>
+                          <li>Шпатлевки</li>
+                          <li>Провода</li>
+                          <li>Профили</li>
+                          <li>Жидкие гвозди</li>
+                          <li>Герметик</li>
+                          <li>Саморезы</li>
+                          <li>Биты, валики и т. п.</li>
+                        </ul>
                         <div class="cost d-none">
-                          <P>Стоимость черновых материалов 
-                            <SPAN class="price">от 615 руб./м<sup>2</sup></SPAN>
-                          </P>
+                          <p>Стоимость черновых материалов <span class="price">от 615 руб./м<sup>2</sup></span></p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <BUTTON class="btn" type="button" data-toggle="modal" data-target="#call_service1">Узнать стоимость</BUTTON>
+                <button class="btn" type="button" data-toggle="modal" data-target="#call_service1">Узнать стоимость</button>
               </div>
             </div>
           </div>
@@ -317,74 +283,67 @@
           <div class="row">
             <div class="col-12 col-lg-5 order_2">
               <div class="service_text">
-                <H3>Капитальный ремонт</H3>
+                <h3>Капитальный ремонт</h3>
                 <div id="service_block_2">
                   <div class="service_item">
-                    <HEADER id="heading3">
-                      <BUTTON data-toggle="collapse" data-target="#service3" aria-expanded="true" aria-controls="collapseOne">Работы</BUTTON>
-                    </HEADER>
+                    <header id="heading3">
+                      <button data-toggle="collapse" data-target="#service3" aria-expanded="true" aria-controls="collapseOne">Работы</button>
+                    </header>
                     <div class="collapse show" id="service3" aria-labelledby="heading3" data-parent="#service_block_2">
                       <div class="serv_text">
-                        <UL class="list">
-                          <LI>Демонтажные работы</LI>
-                          <LI>Устройство стяжки</LI>
-                          <LI>Грунтование пола и стен</LI>
-                          <LI>Устройство наливных полов</LI>
-                          <LI>Кирпичная кладка</LI>
-                          <LI>Шпатлевка и штукатурка стен</LI>
-                          <LI>Настил линолеума, ковролин</LI>
-                          <LI>Оклейка стен обоями</LI>
-                          <LI>Монтаж натяжного потолка</LI>
-                          <LI>Укладка плитки на пол и на стены в ванной</LI>
-                          <LI>Установка реечного потолка в ванной</LI>
-                          <LI>Монтаж натяжного потолка во всех помещениях</LI>
-                          <LI>Электромонтажные работы и сантехнические работы</LI>
-                          <LI>Установка откосов, подоконников и карнизов</LI>
-                        </UL>
+                        <ul class="list">
+                          <li>Демонтажные работы</li>
+                          <li>Устройство стяжки </li>
+                          <li>Грунтование пола и стен</li>
+                          <li>Устройство наливных полов</li>
+                          <li>Кирпичная кладка</li>
+                          <li>Шпатлевка и штукатурка стен</li>
+                          <li>Настил линолеума, ковролина</li>
+                          <li>Оклейка стен обоями</li>
+                          <li>Монтаж натяжного потолка</li>
+                          <li>Укладка плитки на пол и на стены в ванной</li>
+                          <li>Установка реечного потолка в ванной</li>
+                          <li>Монтаж натяжного потолка во всех помещениях</li>
+                          <li>Электромонтажные работы и сантехнические работы</li>
+                          <li>Установка откосов, подоконников и карнизов</li>
+                        </ul>
                         <div class="cost">
-                          <P>Стоимость работ: 
-                            <SPAN class="price">от 4 990 руб./м<sup>2</sup></SPAN>
-                          </P>
+                          <p>Стоимость работ: <span class="price">от 4 990 руб./м<sup>2</sup></span></p>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="service_item">
-                    <HEADER id="heading4">
-                      <BUTTON class="collapsed black_mat" data-toggle="collapse" data-target="#service4" aria-expanded="true" aria-controls="collapseOne">Черновые материалы</BUTTON>
-                    </HEADER>
+                    <header id="heading4">
+                      <button class="collapsed black_mat" data-toggle="collapse" data-target="#service4" aria-expanded="true" aria-controls="collapseOne">Черновые материалы</button>
+                    </header>
                     <div class="collapse" id="service4" aria-labelledby="heading4" data-parent="#service_block_2">
                       <div class="serv_text">
-                        <P class="serv_text_1">*заказывая ремонт в нашей компании, Вы можете приобрести материалы самостоятельно или приобрести у нас
-                          <UL class="list">
-                            <LI>Штукатурки и шпатлевки</LI>
-                            <LI>Трубы и провода</LI>
-                            <LI>Гипсокартон</LI>
-                            <LI>Профили</LI>
-                            <LI>Плиточные и обойные клеи</LI>
-                            <LI>Жидкие гвозди, герметик и саморезы</LI>
-                            <LI>Биты, валики и т. п.</LI>
-                          </UL>
-                          <div class="cost d-none">
-                            <P>Стоимость черновых материалов 
-                              <SPAN class="price">от 1 530 руб./м<sup>2</sup></SPAN>
-                            </P>
-                          </div>
-                        </P>
+                        <p class="serv_text_1">* заказывая ремонт в нашей компании, Вы можете приобрести материалы самостоятельно или приобрести у нас</p>
+                        <ul class="list">
+                          <li>Штукатурки и шпатлевки</li>
+                          <li>Трубы и провода</li>
+                          <li>Гипсокартон</li>
+                          <li>Профили</li>
+                          <li>Плиточные и обойные клеи</li>
+                          <li>Жидкие гвозди, герметик и саморезы</li>
+                          <li>Биты, валики и т. п.</li>
+                        </ul>
+                        <div class="cost d-none">
+                          <p>Стоимость черновых материалов <span class="price">от 1 530 руб./м<sup>2</sup></span></p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <BUTTON class="btn" type="button" data-toggle="modal" data-target="#call_service2">Узнать стоимость</BUTTON>
+                <button class="btn" type="button" data-toggle="modal" data-target="#call_service2">Узнать стоимость</button>
               </div>
             </div>
             <div class="d-none d-md-block col-md-12 col-lg-7 img_block2">
               <div class="slider_garant">
-                <DIV>До 3 лет<br/>гарантии</DIV>
+                <div>До 3 лет<br/> гарантии</div>
               </div>
-              <div class="img_block">
-                <IMG class="img-fluid" data-src="upload/service_2.jpg" alt=""></IMG>
-              </div>
+              <div class="img_block"><img class="img-fluid" data-src="upload/service_2.jpg" alt=""/></div>
             </div>
           </div>
         </div>
@@ -392,80 +351,74 @@
           <div class="row">
             <div class="d-none d-md-block col-md-12 col-lg-7 img_block3">
               <div class="slider_garant">
-                <DIV>До 3 лет<br/>гарантии</DIV>
+                <div>До 3 лет<br/> гарантии</div>
               </div>
-              <div class="img_block">
-                <IMG class="img-fluid" data-src="upload/service_3.jpg" alt=""></IMG>
-              </div>
+              <div class="img_block"><img class="img-fluid" data-src="upload/service_3.jpg" alt=""/></div>
             </div>
             <div class="col-12 col-lg-5">
               <div class="service_text">
-                <H3>Ремонт “Под ключ”</H3>
-                <DIV id="service_block_3">
+                <h3>Ремонт “Под ключ”</h3>
+                <div id="service_block_3">
                   <div class="service_item">
-                    <HEADER id="heading5">
-                      <BUTTON data-toggle="collapse" data-target="#service5" aria-expanded="true" aria-controls="collapseOne">Работы</BUTTON>
-                    </HEADER>
+                    <header id="heading5">
+                      <button data-toggle="collapse" data-target="#service5" aria-expanded="true" aria-controls="collapseOne">Работы</button>
+                    </header>
                     <div class="collapse show" id="service5" aria-labelledby="heading5" data-parent="#service_block_3">
                       <div class="serv_text">
-                        <UL class="list"> 
-                          <LI>Демонтажные работы</LI>
-                          <LI>Устройство стяжки и гидроизоляция пола</LI>
-                          <LI>Шпатлевка и штукатурка сте</LI>
-                          <LI>Грунтование пола и стен</LI>
-                          <LI>Устройство наливных полов</LI>
-                          <LI>Кирпичная кладка</LI>
-                          <LI>Укладка подложки, ламината, настил линолеума, ковролина</LI>
-                          <LI>Оклейка стен обоями</LI>
-                          <LI>Монтаж натяжного потолка</LI>
-                          <LI>Укладка плитки на пол и на стены в ванной</LI>
-                          <LI>Установка реечного потолка в ванной</LI>
-                          <LI>Монтаж натяжного потолка во всех помещениях</LI>
-                          <LI>Электромонтажные работы и сантехнические работы</LI>
-                          <LI>Установка откосов, подоконников, отливов и карнизов</LI>
-                          <LI>Установка дверей</LI>
-                        </UL>
+                        <ul class="list">
+                          <li>Демонтажные работы</li>
+                          <li>Устройство стяжки и гидроизоляция пола</li>
+                          <li>Шпатлевка и штукатурка стен </li>
+                          <li>Грунтование пола и стен</li>
+                          <li>Устройство наливных полов</li>
+                          <li>Кирпичная кладка</li>
+                          <li>Укладка подложки, ламината, настил линолеума, ковролина</li>
+                          <li>Оклейка стен обоями</li>
+                          <li>Монтаж натяжного потолка</li>
+                          <li>Укладка плитки на пол и на стены в ванной</li>
+                          <li>Установка реечного потолка в ванной</li>
+                          <li>Монтаж натяжного потолка во всех помещениях</li>
+                          <li>Электромонтажные работы и сантехнические работы</li>
+                          <li>Установка откосов, подоконников, отливов и карнизов</li>
+                          <li>Установка дверей</li>
+                        </ul>
                         <div class="cost">
-                          <P>Стоимость работ: 
-                            <SPAN class="price">от 7 990 руб./м<sup>2</sup></SPAN>
-                          </P>
+                          <p>Стоимость работ: <span class="price">от 7 990 руб./м<sup>2</sup></span></p>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="service_item">
-                    <HEADER id="heading6">
-                      <BUTTON class="collapsed black_mat" data-toggle="collapse" data-target="#service6" aria-expanded="true" aria-controls="collapseOne">Черновые материалы</BUTTON>
-                    </HEADER>
+                    <header id="heading6">
+                      <button class="collapsed black_mat" data-toggle="collapse" data-target="#service6" aria-expanded="true" aria-controls="collapseOne">Черновые материалы</button>
+                    </header>
                     <div class="collapse" id="service6" aria-labelledby="heading6" data-parent="#service_block_3">
                       <div class="serv_text">
-                        <P class="serv_text_1">*заказывая ремонт в нашей компании, Вы можете приобрести материалы самостоятельно или приобрести у нас</P>
-                        <UL class="list">
-                          <LI>Штукатурки и шпатлевки</LI>
-                          <LI>Трубы и провода</LI>
-                          <LI>Гипсокартон</LI>
-                          <LI>Профили</LI>
-                          <LI>Плиточные и обойные клеи</LI>
-                          <LI>Жидкие гвозди, герметик и саморезы</LI>
-                          <LI>Биты, валики и т. п.</LI>
-                        </UL>
+                        <p class="serv_text_1">* заказывая ремонт в нашей компании, Вы можете приобрести материалы самостоятельно или приобрести у нас</p>
+                        <ul class="list">
+                          <li>Штукатурки и шпатлевки</li>
+                          <li>Трубы и провода</li>
+                          <li>Гипсокартон</li>
+                          <li>Профили</li>
+                          <li>Плиточные и обойные клеи</li>
+                          <li>Жидкие гвозди, герметик и саморезы</li>
+                          <li>Биты, валики и т. п.</li>
+                        </ul>
                         <div class="cost d-none">
-                          <P>Стоимость черновых материалов 
-                            <SPAN class="price">от 1 680 руб./м<sup>2</sup></SPAN>
-                          </P>
+                          <p>Стоимость черновых материалов <span class="price">от 1 680 руб./м<sup>2</sup></span></p>
                         </div>
                       </div>
                     </div>
                   </div>
-                </DIV>
-                <BUTTON class="btn" type="button" data-toggle="modal" data-target="#call_service3">Узнать стоимость</BUTTON>
+                </div>
+                <button class="btn" type="button" data-toggle="modal" data-target="#call_service3">Узнать стоимость</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <section class="why_trust">
+    </section>
+    <section class="fon_2" id="why_trust">
       <div class="container-fluid">
         <div class="title">
           <H2></H2>
@@ -595,67 +548,59 @@
         <div class="title">
           <H2>Примеры наших работ</H2>
         </div>
-        <UL class="nav nav-tabs portfolio-main-filter d-none d-md-flex" id="portfolioMainTab" role="tablist">
-          <LI class="nav-item">
-            <A class="nav-link active" id="filter-1-tab" data-toggle="tab" href="#filter-1" role="tab" aria-controls="filter-1" aria-selected="true">Все</A>
-          </LI>
-          <LI class="nav-item">
-            <A class="nav-link active" id="filter-3-tab" data-toggle="tab" href="#filter-3" role="tab" aria-controls="filter-3" aria-selected="false">Косметический</A>
-          </LI>
-          <LI class="nav-item">
-            <A class="nav-link active" id="filter-2-tab" data-toggle="tab" href="#filter-2" role="tab" aria-controls="filter-2" aria-selected="false">Капитальный</A>
-          </LI>
-          <LI class="nav-item">
-            <A class="nav-link active" id="filter-4-tab" data-toggle="tab" href="#filter-4" role="tab" aria-controls="filter-4" aria-selected="false">Под ключ</A>
-          </LI>
-          <LI class="nav-item">
-            <A class="nav-link active" id="filter-5-tab" data-toggle="tab" href="#filter-5" role="tab" aria-controls="filter-5" aria-selected="false">Квартира</A>
-          </LI>
-          <LI class="nav-item">
-            <A class="nav-link active" id="filter-6-tab" data-toggle="tab" href="#filter-6" role="tab" aria-controls="filter-6" aria-selected="false">Комната</A>
-          </LI>
-          <LI class="nav-item">
-            <A class="nav-link active" id="filter-7-tab" data-toggle="tab" href="#filter-7" role="tab" aria-controls="filter-7" aria-selected="false">Ванная</A>
-          </LI>
-          <LI class="nav-item">
-            <A class="nav-link active" id="filter-8-tab" data-toggle="tab" href="#filter-8" role="tab" aria-controls="filter-8" aria-selected="false">Кухня</A>
-          </LI>
-        </UL>
-        <P class="main-nav-text d-block d-md-none">Выберите тип ремонта или помещение</P>
-        <SECTION class="portfolio-select main-select d-md-none">
-          <OPTION class="filter-1" value="filter-1">Все</OPTION>
-          <OPTION class="filter-2" value="filter-2">Косметический</OPTION>
-          <OPTION class="filter-3" value="filter-3">Капитальный</OPTION>
-          <OPTION class="filter-4" value="filter-4">Под ключ</OPTION>
-          <OPTION class="filter-5" value="filter-5">Квартира</OPTION>
-          <OPTION class="filter-6" value="filter-6">Комната</OPTION>
-          <OPTION class="filter-7" value="filter-7">Ванная</OPTION>
-          <OPTION class="filter-8" value="filter-8">Кухня</OPTION>
-        </SECTION>
+        <ul class="nav nav-tabs portfolio-main-filter d-none d-md-flex" id="portfolioMainTab" role="tablist">
+          <li class="nav-item"><a class="nav-link active" id="filter-1-tab" data-toggle="tab" href="#filter-1" role="tab" aria-controls="filter-1" aria-selected="true">Все</a></li>
+          <li class="nav-item"><a class="nav-link" id="filter-3-tab" data-toggle="tab" href="#filter-3" role="tab" aria-controls="filter-3" aria-selected="false">Косметический</a></li>
+          <li class="nav-item"><a class="nav-link" id="filter-2-tab" data-toggle="tab" href="#filter-2" role="tab" aria-controls="filter-2" aria-selected="false">Капитальный</a></li>
+          <li class="nav-item"><a class="nav-link" id="filter-4-tab" data-toggle="tab" href="#filter-4" role="tab" aria-controls="filter-4" aria-selected="false">Под ключ</a></li>
+          <li class="nav-item"><a class="nav-link" id="filter-5-tab" data-toggle="tab" href="#filter-5" role="tab" aria-controls="filter-5" aria-selected="false">Квартира</a></li>
+          <li class="nav-item"><a class="nav-link" id="filter-6-tab" data-toggle="tab" href="#filter-6" role="tab" aria-controls="filter-6" aria-selected="false">Комната</a></li>
+          <li class="nav-item"><a class="nav-link" id="filter-7-tab" data-toggle="tab" href="#filter-7" role="tab" aria-controls="filter-7" aria-selected="false">Ванная</a></li>
+          <li class="nav-item"><a class="nav-link" id="filter-8-tab" data-toggle="tab" href="#filter-8" role="tab" aria-controls="filter-8" aria-selected="false">Кухня</a></li>
+        </ul>
+        <p class="main-nav-text d-block d-md-none">Выберите тип ремонта или помещение</p>
+        <select class="portfolio-select main-select d-md-none">
+          <option class="filter-1" value="filter-1">Все</option>
+          <option class="filter-3" value="filter-3">Косметический</option>
+          <option class="filter-2" value="filter-2">Капитальный</option>
+          <option class="filter-4" value="filter-4">Под ключ</option>
+          <option class="filter-5" value="filter-5">Квартира</option>
+          <option class="filter-6" value="filter-6">Комната</option>
+          <option class="filter-7" value="filter-7">Ванная</option>
+          <option class="filter-8" value="filter-8">Кухня</option>
+        </select>
         <div class="portfolio-nav-block d-none d-md-block">
-          <UL class="portfolio-nav sub-menu-1" id="portfolioTab">
-            <LI class="filter-1 filter-4 filter-5 portfolio-nav-item">
-              <A class="nav-link active show" id="sub-filter-1-tab" href="#sub-filter-1" role="tab" aria-controls="sub-filter-1" aria-selected="false">68 м<sup>2</sup></A>
-            </LI>
-            <LI class="filter-1 filter-4 filter-5 portfolio-nav-item">
-              <A class="nav-link active show" id="sub-filter-29-tab" href="#sub-filter-29" role="tab" aria-controls="sub-filter-29" aria-selected="false">62 м<sup>2</sup></A>
-            </LI>
-            <LI class="filter-1 filter-4 filter-5 portfolio-nav-item">
-              <A class="nav-link active show" id="sub-filter-2-tab" href="#sub-filter-2" role="tab" aria-controls="sub-filter-2" aria-selected="false">42 м<sup>2</sup></A>
-            </LI>
-            <LI class="filter-1 filter-4 filter-5 portfolio-nav-item">
-              <A class="nav-link active show" id="sub-filter-3-tab" href="#sub-filter-3" role="tab" aria-controls="sub-filter-3" aria-selected="false">53 м<sup>2</sup></A>
-            </LI>
-            <LI class="filter-1 filter-4 filter-5 portfolio-nav-item">
-              <A class="nav-link active show" id="sub-filter-4-tab" href="#sub-filter-4" role="tab" aria-controls="sub-filter-4" aria-selected="false">96 м<sup>2</sup></A>
-            </LI>
-            <LI class="filter-1 filter-4 filter-5 portfolio-nav-item">
-              <A class="nav-link active show" id="sub-filter-5-tab" href="#sub-filter-5" role="tab" aria-controls="sub-filter-5" aria-selected="false">54 м<sup>2</sup></A>
-            </LI>
-            <LI class="filter-1 filter-4 filter-5 portfolio-nav-item">
-              <A class="nav-link active show" id="sub-filter-6-tab" href="#sub-filter-6" role="tab" aria-controls="sub-filter-6" aria-selected="false">73 м<sup>2</sup></A>
-            </LI>
-          </UL>
+          <ul class="portfolio-nav sub-menu-1" id="portfolioTab">
+            <li class="filter-1 filter-4 filter-5 portfolio-nav-item"><a class="nav-link active show" id="sub-filter-1-tab" href="#sub-filter-1" role="tab" aria-controls="sub-filter-1" aria-selected="false">68 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-4 filter-5 portfolio-nav-item"><a class="nav-link" id="sub-filter-29-tab" href="#sub-filter-29" role="tab" aria-controls="sub-filter-29" aria-selected="false">62 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-3 filter-5 portfolio-nav-item"><a class="nav-link" id="sub-filter-2-tab" href="#sub-filter-2" role="tab" aria-controls="sub-filter-2" aria-selected="false">42 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-3 filter-5 portfolio-nav-item"><a class="nav-link" id="sub-filter-3-tab" href="#sub-filter-3" role="tab" aria-controls="sub-filter-3" aria-selected="false">53 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-4 filter-5 portfolio-nav-item"><a class="nav-link" id="sub-filter-4-tab" href="#sub-filter-4" role="tab" aria-controls="sub-filter-4" aria-selected="false">96 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-4 filter-5 portfolio-nav-item"><a class="nav-link" id="sub-filter-5-tab" href="#sub-filter-5" role="tab" aria-controls="sub-filter-5" aria-selected="false">54 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-4 filter-5 portfolio-nav-item"><a class="nav-link" id="sub-filter-6-tab" href="#sub-filter-6" role="tab" aria-controls="sub-filter-6" aria-selected="false">73 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-2 filter-5 portfolio-nav-item"><a class="nav-link" id="sub-filter-7-tab" href="#sub-filter-7" role="tab" aria-controls="sub-filter-7" aria-selected="false">89 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-4 filter-7 portfolio-nav-item"><a class="nav-link" id="sub-filter-8-tab" href="#sub-filter-8" role="tab" aria-controls="sub-filter-8" aria-selected="false">3 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-3 filter-6 portfolio-nav-item"><a class="nav-link" id="sub-filter-9-tab" href="#sub-filter-9" role="tab" aria-controls="sub-filter-9" aria-selected="false">33 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-3 filter-8 portfolio-nav-item"><a class="nav-link" id="sub-filter-10-tab" href="#sub-filter-10" role="tab" aria-controls="sub-filter-10" aria-selected="false">8 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-2 filter-7 portfolio-nav-item"><a class="nav-link" id="sub-filter-11-tab" href="#sub-filter-11" role="tab" aria-controls="sub-filter-11" aria-selected="false">4 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-2 filter-7 portfolio-nav-item"><a class="nav-link" id="sub-filter-12-tab" href="#sub-filter-12" role="tab" aria-controls="sub-filter-12" aria-selected="false">56 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-2 filter-8 portfolio-nav-item"><a class="nav-link" id="sub-filter-13-tab" href="#sub-filter-13" role="tab" aria-controls="sub-filter-13" aria-selected="false">16 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-2 filter-7 portfolio-nav-item"><a class="nav-link" id="sub-filter-14-tab" href="#sub-filter-14" role="tab" aria-controls="sub-filter-14" aria-selected="false">44 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-3 filter-5 portfolio-nav-item"><a class="nav-link" id="sub-filter-15-tab" href="#sub-filter-15" role="tab" aria-controls="sub-filter-15" aria-selected="false">16 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-2 filter-8 portfolio-nav-item"><a class="nav-link" id="sub-filter-16-tab" href="#sub-filter-16" role="tab" aria-controls="sub-filter-16" aria-selected="false">8 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-3 filter-5 portfolio-nav-item"><a class="nav-link" id="sub-filter-17-tab" href="#sub-filter-17" role="tab" aria-controls="sub-filter-17" aria-selected="false">42 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-4 filter-7 portfolio-nav-item"><a class="nav-link" id="sub-filter-18-tab" href="#sub-filter-18" role="tab" aria-controls="sub-filter-18" aria-selected="false">5 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-4 filter-7 portfolio-nav-item"><a class="nav-link" id="sub-filter-19-tab" href="#sub-filter-19" role="tab" aria-controls="sub-filter-19" aria-selected="false">5 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-2 filter-5 portfolio-nav-item"><a class="nav-link" id="sub-filter-20-tab" href="#sub-filter-20" role="tab" aria-controls="sub-filter-20" aria-selected="false">13 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-4 filter-7 portfolio-nav-item"><a class="nav-link" id="sub-filter-21-tab" href="#sub-filter-21" role="tab" aria-controls="sub-filter-21" aria-selected="false">3 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-4 filter-7 portfolio-nav-item"><a class="nav-link" id="sub-filter-22-tab" href="#sub-filter-22" role="tab" aria-controls="sub-filter-22" aria-selected="false">5 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-3 filter-6 portfolio-nav-item"><a class="nav-link" id="sub-filter-23-tab" href="#sub-filter-23" role="tab" aria-controls="sub-filter-23" aria-selected="false">14 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-2 filter-6 portfolio-nav-item"><a class="nav-link" id="sub-filter-24-tab" href="#sub-filter-24" role="tab" aria-controls="sub-filter-24" aria-selected="false">14 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-2 filter-5 portfolio-nav-item"><a class="nav-link" id="sub-filter-25-tab" href="#sub-filter-25" role="tab" aria-controls="sub-filter-25" aria-selected="false">62 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-4 filter-5 portfolio-nav-item"><a class="nav-link" id="sub-filter-26-tab" href="#sub-filter-26" role="tab" aria-controls="sub-filter-26" aria-selected="false">33 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-2 filter-8 portfolio-nav-item"><a class="nav-link" id="sub-filter-27-tab" href="#sub-filter-27" role="tab" aria-controls="sub-filter-27" aria-selected="false">7 м<sup>2</sup></a></li>
+            <li class="filter-1 filter-3 filter-5 portfolio-nav-item"><a class="nav-link" id="sub-filter-28-tab" href="#sub-filter-28" role="tab" aria-controls="sub-filter-28" aria-selected="false">45 м<sup>2</sup></a></li>
+          </ul>
         </div>
         <SELECT class="portfolio-select sub-select d-md-none">
           <OPTION class="filter-1 filter-4 filter-5" value="sub-filter-1">68 м<sup>2</sup></OPTION>
@@ -675,126 +620,93 @@
               <div class="row">
                 <div class="col-12 col-lg-7">
                   <div class="top-slider-overflow">
-                    <P class="top-slider-overflow-address">Мос. обл., г. Реутов, ул. Академика Челомея, д. 11</P>
-                    <P class="top-slider-overflow-work-type">Ремонт квартиры под ключ</P>
-                    <A class="top-slider-overflow-close" href=""></A>
+                    <p class="top-slider-overflow-address">Мос. обл., г. Реутов, ул. Академика Челомея, д. 11</p>
+                    <p class="top-slider-overflow-work-type">Ремонт квартиры под ключ</p><a class="top-slider-overflow-close" href="#"></a>
                   </div>
                   <div class="portfolio-item-top-slider" id="slider-1">
                     <picture><img class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/1.jpg" src="img/ajax-loader.gif"/></picture>
-                    <PICTURE>
-                      <IMG class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/2.jpg" src="img/ajax-loader.gif"></IMG>
-                    </PICTURE>
-                    <PICTURE>
-                      <IMG class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/3.jpg" src="img/ajax-loader.gif"></IMG>
-                    </PICTURE>
-                    <PICTURE>
-                      <IMG class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/4.jpg" src="img/ajax-loader.gif"></IMG>
-                    </PICTURE>
-                    <PICTURE>
-                      <IMG class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/5.jpg" src="img/ajax-loader.gif"></IMG>
-                    </PICTURE>
-                    <PICTURE>
-                      <IMG class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/6.jpg" src="img/ajax-loader.gif"></IMG>
-                    </PICTURE>
-                    <PICTURE>
-                      <IMG class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/7.jpg" src="img/ajax-loader.gif"></IMG>
-                    </PICTURE>
+                    <picture><img class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/2.jpg" src="img/ajax-loader.gif"/></picture>
+                    <picture><img class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/3.jpg" src="img/ajax-loader.gif"/></picture>
+                    <picture><img class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/4.jpg" src="img/ajax-loader.gif"/></picture>
+                    <picture><img class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/5.jpg" src="img/ajax-loader.gif"/></picture>
+                    <picture><img class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/6.jpg" src="img/ajax-loader.gif"/></picture>
+                    <picture><img class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/7.jpg" src="img/ajax-loader.gif"/></picture>
                   </div>
                   <div class="portfolio-item-bottom-slider d-none d-md-flex" id="sub-slider-1">
-                    <PICTURE>
-                      <IMG class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/1.jpg" src="img/ajax-loader-small.gif"></IMG>
-                    </PICTURE>
-                    <PICTURE>
-                      <IMG class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/2.jpg" src="img/ajax-loader-small.gif"></IMG>
-                    </PICTURE>
-                    <PICTURE>
-                      <IMG class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/3.jpg" src="img/ajax-loader-small.gif"></IMG>
-                    </PICTURE>
-                    <PICTURE>
-                      <IMG class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/4.jpg" src="img/ajax-loader-small.gif"></IMG>
-                    </PICTURE>
-                    <PICTURE>
-                      <IMG class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/5.jpg" src="img/ajax-loader-small.gif"></IMG>
-                    </PICTURE>
-                    <PICTURE>
-                      <IMG class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/6.jpg" src="img/ajax-loader-small.gif"></IMG>
-                    </PICTURE>
-                    <PICTURE>
-                      <IMG class="portfolio-item-img img-responsive" data-src="upload/portfolio_n/project_1/photo_l/7.jpg" src="img/ajax-loader-small.gif"></IMG>
-                    </PICTURE>
+                    <picture><img class="portfolio-item-img-sub img-responsive" data-src="upload/portfolio_n/project_1/photo_l/1.jpg" src="img/ajax-loader-small.gif"/></picture>
+                    <picture><img class="portfolio-item-img-sub img-responsive" data-src="upload/portfolio_n/project_1/photo_l/2.jpg" src="img/ajax-loader-small.gif"/></picture>
+                    <picture><img class="portfolio-item-img-sub img-responsive" data-src="upload/portfolio_n/project_1/photo_l/3.jpg" src="img/ajax-loader-small.gif"/></picture>
+                    <picture><img class="portfolio-item-img-sub img-responsive" data-src="upload/portfolio_n/project_1/photo_l/4.jpg" src="img/ajax-loader-small.gif"/></picture>
+                    <picture><img class="portfolio-item-img-sub img-responsive" data-src="upload/portfolio_n/project_1/photo_l/5.jpg" src="img/ajax-loader-small.gif"/></picture>
+                    <picture><img class="portfolio-item-img-sub img-responsive" data-src="upload/portfolio_n/project_1/photo_l/6.jpg" src="img/ajax-loader-small.gif"/></picture>
+                    <picture><img class="portfolio-item-img-sub img-responsive" data-src="upload/portfolio_n/project_1/photo_l/7.jpg" src="img/ajax-loader-small.gif"/></picture>
                   </div>
                 </div>
                 <div class="col-12 col-lg-5">
                   <div class="portfolio-item-right-main">
                     <div class="portfolio-item-right-top">
-                      <P class="top-slider-overflow-address d-md-none">Мос. обл., г. Реутов, ул. Академика Челомея, д. 11</P>
-                      <P class="top-slider-overflow-work-type d-md-none">Ремонт квартиры под ключ</P>
-                      <P class="portfolio-item-right-top-blocks">Цена: 473 000 &#8381;</P>
-                      <P class="portfolio-item-right-top-blocks">Площадь: 68 м<sup>2</sup></P>
-                      <P class="portfolio-item-right-top-blocks">Срок: 87 дней</P>
-                      <P class="portfolio-item-right-top-blocks">Гарантия: 3 года</P>
+                      <p class="top-slider-overflow-address d-md-none">Мос. обл., г. Реутов, ул. Академика Челомея, д. 11</p>
+                      <p class="top-slider-overflow-work-type d-md-none">Ремонт квартиры под ключ</p>
+                      <p class="portfolio-item-right-top-blocks">Цена: 473 000 ₽</p>
+                      <p class="portfolio-item-right-top-blocks">Площадь: 68 м<sup>2</sup></p>
+                      <p class="portfolio-item-right-top-blocks">Срок: 87 дней</p>
+                      <p class="portfolio-item-right-top-blocks">Гарантия: 3 года</p>
                     </div>
                     <div class="accordion portfolio-item-top-accordion" id="accordionExample">
                       <div class="card">
                         <div class="card-header" id="headingOne">
-                          <H5 class="mb-0">
-                            <BUTTON class="portfolio-item-accord-btn toggled" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                              <SPAN></SPAN>Проделанная работа
-                            </BUTTON>
-                          </H5>
+                          <h5 class="mb-0">
+                            <button class="portfolio-item-accord-btn toggled" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><span></span>Проделанная работа</button>
+                          </h5>
                         </div>
-                        <div class="collapse show collapse show" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="collapse show" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample">
                           <div class="card-body">
-                            <UL class="work-list">
-                              <LI class="work-list-item">Грунтовка стен и пола</LI>
-                              <LI class="work-list-item">Гидроизоляция пола смесью "Водостоп"</LI>
-                              <LI class="work-list-item">Устройство наливного пола</LI>
-                              <LI class="work-list-item">Штукатурка стен по маякам</LI>
-                              <LI class="work-list-item">Шпатлевка стен</LI>
-                              <LI class="work-list-item">Оклейка стен обоями</LI>
-                              <LI class="work-list-item">Окраска стен</LI>
-                              <LI class="work-list-item">Облицовка стен плиткой</LI>
-                              <LI class="work-list-item">Укладка ламината и плитки на пол</LI>
-                              <LI class="work-list-item">Разводка труб водоснабжения и канализации</LI>
-                              <LI class="work-list-item">Установка сантехники</LI>
-                              <LI class="work-list-item">Установка дверей</LI>
-                              <LI class="work-list-item">Электромонтажные работы</LI>
-                              <LI class="work-list-item">Закупка и доставка материалов</LI>
-                            </UL>
+                            <ul class="work-list">
+                              <li class="work-list-item">Грунтовка стен и пола</li>
+                              <li class="work-list-item">Гидроизоляция пола смесью "Водостоп"</li>
+                              <li class="work-list-item">Устройство наливного пола</li>
+                              <li class="work-list-item">Штукатурка стен по маякам</li>
+                              <li class="work-list-item">Шпатлевка стен</li>
+                              <li class="work-list-item">Оклейка стен обоями</li>
+                              <li class="work-list-item">Окраска стен</li>
+                              <li class="work-list-item">Облицовка стен плиткой</li>
+                              <li class="work-list-item">Укладка ламината и плитки на пол</li>
+                              <li class="work-list-item">Разводка труб водоснабжения и канализации</li>
+                              <li class="work-list-item">Установка сантехники</li>
+                              <li class="work-list-item">Установка дверей</li>
+                              <li class="work-list-item">Электромонтажные работы</li>
+                              <li class="work-list-item">Закупка и доставка материалов</li>
+                            </ul>
                           </div>
                         </div>
                       </div>
                       <div class="card">
                         <div class="card-header" id="headingTwo">
-                          <H5 class="mb-0">
-                            <BUTTON class="portfolio-item-accord-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseOne">
-                              <SPAN>Читать отзыв</SPAN>
-                            </BUTTON>
-                          </H5>
+                          <h5 class="mb-0">
+                            <button class="portfolio-item-accord-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseOne"><span></span>Читать отзыв</button>
+                          </h5>
                         </div>
                         <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample">
                           <div class="card-body">
-                            <P class="portfolio-item-review-author">Алексей Замятин, заказчик</P>
-                            <P class="portfolio-item-review-text">Ремонт сделали супер! Очень доволен тем, как все прошло. Квартира в новостройке, мы долго к ремонту готовились, сделали дизайн-проект. Не были уверены, что все получится, но ваши мастера превзошли все наши ожидания. Особенно понравилось то, как сделали стык плитки и ламината в кухне - как в журналах видели, и у нас теперь так.</P>
+                            <p class="portfolio-item-review-author">Алексей Замятин, заказчик</p>
+                            <p class="portfolio-item-review-text">Ремонт сделали супер! Очень доволен тем, как все прошло. Квартира в новостройке, мы долго к ремонту готовились, сделали дизайн-проект. Не были уверены, что все получится, но ваши мастера превзошли все наши ожидания. Особенно понравилось то, как сделали стык плитки и ламината в кухне - как в журналах видели, и у нас теперь так.</p>
                           </div>
                         </div>
                       </div>
                       <div class="card">
                         <div class="card-header" id="headingThree">
-                          <H5 class="mb-0">
-                            <BUTTON class="portfolio-item-accord-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                              <SPAN>Особенности объекта</SPAN>
-                            </BUTTON>
-                          </H5>
+                          <h5 class="mb-0">
+                            <button class="portfolio-item-accord-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><span></span>Особенности объекта</button>
+                          </h5>
                         </div>
-                        <div class="collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample">
                           <div class="card-body">
-                            <P class="portfolio-item-custom-text">Какой то текст</P>
+                            <p class="portfolio-item-custom-text">Какой то текст</p>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <BUTTON class="portfolio-btn" type="button" data-toggle="modal" data-target="#call_portf Хочу так же!"></BUTTON>
+                    <button class="portfolio-btn" type="button" data-toggle="modal" data-target="#call_portf">Хочу так же!</button>
                   </div>
                 </div>
               </div>
@@ -805,165 +717,190 @@
     </section>
     <section class="fon container">
       <div class="title">
-        <H2>Отзывы клиентов</H2>
+        <h2>Отзывы клиентов</h2>
       </div>
       <div class="reviews_main">
-        <UL class="nav nav-tabs container p-0" id="myTab" role="tablist">
-          <LI class="nav-item">
-            <A class="nav-link active" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video" aria-selected="true">Видеоотзывы</A>
-          </LI>
-          <LI class="nav-item">
-            <A class="nav-link" id="form-tab" data-toggle="tab" href="#form" role="tab" aria-controls="form" aria-selected="false">Анкеты</A>
-          </LI>
-          <LI class="nav-item">
-            <A class="nav-link" id="printed-tab" data-toggle="tab" href="#printed" role="tab" aria-controls="printed" aria-selected="false">Печатные</A>
-          </LI>
-        </UL>
+        <ul class="nav nav-tabs container p-0" id="myTab" role="tablist">
+          <li class="nav-item"><a class="nav-link active" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video" aria-selected="true">Видеоотзывы</a></li>
+          <li class="nav-item"><a class="nav-link" id="form-tab" data-toggle="tab" href="#form" role="tab" aria-controls="form" aria-selected="false">Анкеты</a></li>
+          <li class="nav-item"><a class="nav-link" id="printed-tab" data-toggle="tab" href="#printed" role="tab" aria-controls="printed" aria-selected="false">Печатные</a></li>
+        </ul>
         <div class="tab-content" id="myTabContent">
           <div class="reviews_video container tab-pane fade show active" id="video" role="tabpanel" aria-labelledby="video-tab">
             <div class="video_slide">
-              <div class="videoWrapper yt_video1">
-                <IMG data-lazy="img/video1.jpg" alt="video" width="100%"></IMG>
-              </div>
-              <P class="video_f">Ремонт квартиры на ул. Новой, г. Реутов, Московская обл.</P>
+              <div class="videoWrapper yt_video1"><img data-lazy="img/video1.jpg" alt="video" width="100%"/></div>
+              <p class="video_f">Ремонт квартиры на ул. Новой, г. Реутов, Московская обл.</p>
             </div>
             <div class="video_slide">
-              <div class="videoWrapper yt_video2">
-                <IMG data-lazy="img/video2.jpg" alt="video" width="100%"></IMG>
-              </div>
-              <P class="video_f">Ремонт квартиры на Ново-Молоковском б-ре, г. Москва</P>
+              <div class="videoWrapper yt_video2"><img data-lazy="img/video2.jpg" alt="video" width="100%"/></div>
+              <p class="video_f">Ремонт квартиры на Ново-Молоковском б-ре, г. Москва</p>
             </div>
             <div class="video_slide">
-              <div class="videoWrapper yt_video3">
-                <IMG data-lazy="img/video3.jpg" alt="video" width="100%"></IMG>
-              </div>
-              <P class="video_f">Ремонт квартиры на ул. Юбилейной, г. Мытищи, Московская обл.</P>
+              <div class="videoWrapper yt_video3"><img data-lazy="img/video3.jpg" alt="video" width="100%"/></div>
+              <p class="video_f">Ремонт квартиры на ул. Юбилейной, г. Мытищи, Московская обл.</p>
             </div>
           </div>
           <div class="reviews_forms container tab-pane fade" id="form" role="tabpanel" aria-labelledby="form-tab">
-            <div class="forms_slide">
-              <IMG data-lazy="upload/forms/form1.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal"></IMG>
-            </div>
-            <div class="forms_slide">
-              <IMG data-lazy="upload/forms/form2.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal"></IMG>
-            </div>
-            <div class="forms_slide">
-              <IMG data-lazy="upload/forms/form3.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal"></IMG>
-            </div>
-            <div class="forms_slide">
-              <IMG data-lazy="upload/forms/form4.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal"></IMG>
-            </div>
-            <div class="forms_slide">
-              <IMG data-lazy="upload/forms/form5.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal"></IMG>
-            </div>
-            <div class="forms_slide">
-              <IMG data-lazy="upload/forms/form6.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal"></IMG>
-            </div>
-            <div class="forms_slide">
-              <IMG data-lazy="upload/forms/form7.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal"></IMG>
-            </div>
+            <div class="forms_slide"><img data-lazy="upload/forms/form1.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal"/></div>
+            <div class="forms_slide"><img data-lazy="upload/forms/form2.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal"/></div>
+            <div class="forms_slide"><img data-lazy="upload/forms/form3.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal"/></div>
+            <div class="forms_slide"><img data-lazy="upload/forms/form4.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal"/></div>
+            <div class="forms_slide"><img data-lazy="upload/forms/form5.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal"/></div>
+            <div class="forms_slide"><img data-lazy="upload/forms/form6.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal"/></div>
+            <div class="forms_slide"><img data-lazy="upload/forms/form7.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal"/></div>
           </div>
           <div class="reviews_printed container tab-pane fade" id="printed" role="tabpanel" aria-labelledby="printed-tab">
             <div class="printed_slide position-relative">
-              <div class="printed_slide-title d-flex align-items-center">
-                <IMG class="rounded-circle" data-lazy="upload/review/udaltsova.jpg" alt="photo"></IMG>
-                <P>Мария Удальцова<br>
-                  <SPAN>заказчик</SPAN>
-                </P>
+              <div class="printed_slide-title d-flex align-items-center"><img class="rounded-circle" data-lazy="upload/review/udaltsova.jpg" alt="photo"/>
+                <p>Мария Удальцова<br/><span>заказчик</span></p>
               </div>
-              <P class="printed_slide-text">Мы обратились во Флагман Ремонта, чтобы отремонтировать квартиру под ключ. Точнее, в ремонте нуждались 2 комнаты и коридор. Кухню и санузел мы делали с другой компанией, и нам не понравилось: дорого, долго и с кучей недоработок, которые потом еле устранили. Рабочими Флагмана мы довольны на все 100%: все вовремя и как надо.</P>
+              <p class="printed_slide-text">Мы обратились во Флагман Ремонта, чтобы отремонтировать квартиру под ключ. Точнее, в ремонте нуждались 2 комнаты и коридор. Кухню и санузел мы делали с другой компанией, и нам не понравилось: дорого, долго и с кучей недоработок, которые потом еле устранили. Рабочими Флагмана мы довольны на все 100%: все вовремя и как надо.</p>
             </div>
             <div class="printed_slide position-relative">
-              <div class="printed_slide-title d-flex align-items-center w-100">
-                <IMG class="rounded-circle" data-lazy="upload/review/dolgopolova.jpg" alt="photo"></IMG>
-                <P>Алена Долгополова<br>
-                  <SPAN>заказчик</SPAN>
-                </P>
+              <div class="printed_slide-title d-flex align-items-center w-100"><img class="rounded-circle" data-lazy="upload/review/dolgopolova.jpg" alt="photo"/>
+                <p>Алена Долгополова<br/><span>заказчик</span></p>
               </div>
-              <P class="printed_slide-text">Купили трешку-вторичку. Ремонт поручили «Флагману Ремонта»: нужно было выровнять стены и полы, сделать натяжные потолки. Ребята отлично справились! И мне особенно понравилось, что помогли с подбором материалов и даже выбрали ярко-оранжевый потолок для коридора, в тон стенам. Теперь настроение сразу улучшается, как приходим домой. Рекомендуем!</P>
+              <p class="printed_slide-text">Купили трешку-вторичку. Ремонт поручили «Флагману Ремонта»: нужно было выровнять стены и полы, сделать натяжные потолки. Ребята отлично справились! И мне особенно понравилось, что помогли с подбором материалов и даже выбрали ярко-оранжевый потолок для коридора, в тон стенам. Теперь настроение сразу улучшается, как приходим домой. Рекомендуем!</p>
             </div>
             <div class="printed_slide position-relative">
-              <div class="printed_slide-title d-flex align-items-center">
-                <IMG class="rounded-circle" data-lazy="upload/review/nesmeyanova.jpg" alt="photo"></IMG>
-                <P>Ольга Несмеянова<br>
-                  <SPAN>заказчик</SPAN>
-                </P>
+              <div class="printed_slide-title d-flex align-items-center"><img class="rounded-circle" data-lazy="upload/review/nesmeyanova.jpg" alt="photo"/>
+                <p>Ольга Несмеянова<br/><span>заказчик</span></p>
               </div>
-              <P class="printed_slide-text">«Флагман Ремонта» мне посоветовала тетя, ей они делали ремонт в квартире. Мы же пригласили их в купленную новостройку. Всего за 2,5 месяца они отремонтировали нашу 4-комнатную квартиру от и до. Кроме того, помогли с перепланировкой на этапе согласования: в семье 5 человек, поэтому мы решили разделить совмещенный санузел.</P>
+              <p class="printed_slide-text">«Флагман Ремонта» мне посоветовала тетя, ей они делали ремонт в квартире. Мы же пригласили их в купленную новостройку. Всего за 2,5 месяца они отремонтировали нашу 4-комнатную квартиру от и до. Кроме того, помогли с перепланировкой на этапе согласования: в семье 5 человек, поэтому мы решили разделить совмещенный санузел.</p>
             </div>
             <div class="printed_slide position-relative">
-              <div class="printed_slide-title d-flex align-items-center">
-                <IMG class="rounded-circle" data-lazy="upload/review/ziborov.jpg" alt="photo"></IMG>
-                <P>Олег Зиборов<br>
-                  <SPAN>заказчик</SPAN>
-                </P>
+              <div class="printed_slide-title d-flex align-items-center"><img class="rounded-circle" data-lazy="upload/review/ziborov.jpg" alt="photo"/>
+                <p>Олег Зиборов<br/><span>заказчик</span></p>
               </div>
-              <P class="printed_slide-text">С супругой наконец-то приобрели квартиру. Предыдущие владельцы не так давно делали ремонт, но мы все же решили частично переделать под себя. Нашли в интернете «Флагман Ремонта», обратились. Мужики рукастые, все сделали на 5+. Капитальный ремонт нам был нужен только в ванной, в комнате, коридоре и на кухне — косметика.</P>
+              <p class="printed_slide-text">С супругой наконец-то приобрели квартиру. Предыдущие владельцы не так давно делали ремонт, но мы все же решили частично переделать под себя. Нашли в интернете «Флагман Ремонта», обратились. Мужики рукастые, все сделали на 5+. Капитальный ремонт нам был нужен только в ванной, в комнате, коридоре и на кухне — косметика.</p>
             </div>
             <div class="printed_slide position-relative">
-              <div class="printed_slide-title d-flex align-items-center">
-                <IMG class="rounded-circle" data-lazy="upload/review/deeva.jpg" alt="photo"></IMG>
-                <P>Марина Деева<br>
-                  <SPAN>заказчик</SPAN>
-                </P>
+              <div class="printed_slide-title d-flex align-items-center"><img class="rounded-circle" data-lazy="upload/review/deeva.jpg" alt="photo"/>
+                <p>Марина Деева<br/><span>заказчик</span></p>
               </div>
-              <P class="printed_slide-text">Я пригласила ребят, чтобы переклеить обои в кухне и коридоре, выложить плиткой "фартук" и полностью отремонтировать ванную. Порадовала скромная сумма сметы и быстрые сроки - не мусолили полгода, а сделали всего за 3 недели. Спасибо "Флагману ремонта"!</P>
+              <p class="printed_slide-text">Я пригласила ребят, чтобы переклеить обои в кухне и коридоре, выложить плиткой "фартук" и полностью отремонтировать ванную. Порадовала скромная сумма сметы и быстрые сроки - не мусолили полгода, а сделали всего за 3 недели. Спасибо "Флагману ремонта"!</p>
             </div>
             <div class="printed_slide position-relative">
-              <div class="printed_slide-title d-flex align-items-center">
-                <IMG class="rounded-circle" data-lazy="upload/review/deeva.jpg" alt="photo"></IMG>
-                <P>Марина Деева<br>
-                  <SPAN>заказчик</SPAN>
-                </P>
+              <div class="printed_slide-title d-flex align-items-center"><img class="rounded-circle" data-lazy="upload/review/zuev.jpg" alt="photo"/>
+                <p>Игорь Зуев<br/><span>заказчик</span></p>
               </div>
-              <P class="printed_slide-text">Я пригласила ребят, чтобы переклеить обои в кухне и коридоре, выложить плиткой "фартук" и полностью отремонтировать ванную. Порадовала скромная сумма сметы и быстрые сроки - не мусолили полгода, а сделали всего за 3 недели. Спасибо "Флагману ремонта"!</P>
-            </div>
-            <div class="printed_slide position-relative">
-              <div class="printed_slide-title d-flex align-items-center">
-                <IMG class="rounded-circle" data-lazy="upload/review/deeva.jpg" alt="photo"></IMG>
-                <P>Марина Деева<br>
-                  <SPAN>заказчик</SPAN>
-                </P>
-              </div>
-              <P class="printed_slide-text">Я пригласила ребят, чтобы переклеить обои в кухне и коридоре, выложить плиткой "фартук" и полностью отремонтировать ванную. Порадовала скромная сумма сметы и быстрые сроки - не мусолили полгода, а сделали всего за 3 недели. Спасибо "Флагману ремонта"!</P>
-            </div>
-            <div class="printed_slide position-relative">
-              <div class="printed_slide-title d-flex align-items-center">
-                <IMG class="rounded-circle" data-lazy="upload/review/deeva.jpg" alt="photo"></IMG>
-                <P>Марина Деева<br>
-                  <SPAN>заказчик</SPAN>
-                </P>
-              </div>
-              <P class="printed_slide-text">Я пригласила ребят, чтобы переклеить обои в кухне и коридоре, выложить плиткой "фартук" и полностью отремонтировать ванную. Порадовала скромная сумма сметы и быстрые сроки - не мусолили полгода, а сделали всего за 3 недели. Спасибо "Флагману ремонта"!</P>
-            </div>
-            <div class="printed_slide position-relative">
-              <div class="printed_slide-title d-flex align-items-center">
-                <IMG class="rounded-circle" data-lazy="upload/review/deeva.jpg" alt="photo"></IMG>
-                <P>Марина Деева<br>
-                  <SPAN>заказчик</SPAN>
-                </P>
-              </div>
-              <P class="printed_slide-text">Я пригласила ребят, чтобы переклеить обои в кухне и коридоре, выложить плиткой "фартук" и полностью отремонтировать ванную. Порадовала скромная сумма сметы и быстрые сроки - не мусолили полгода, а сделали всего за 3 недели. Спасибо "Флагману ремонта"!</P>
+              <p class="printed_slide-text">Супруга пожелала обновить гостиную. Пригласили мастеров из вашей компании. Они к делу подошли серьезно: подровняли стены, перестелили пол по технологии. В результате их трудов получилось светло и свежо. Нам нравится. Спасибо!</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="reviews_footer d-lg-flex justify-content-lg-center align-items-lg-center">
-        <SPAN class="reviews_footer-title mb-lg-0">Флагман Ремонта на сайтах-отзовиках:</SPAN>
-        <UL class="reviews_footer-list d-flex flex-wrap flex-sm-nowrap justify-content-sm-center">
-          <LI class="reviews_footer-item">
-            <A class="yell" href="https://www.yell.ru/moscow/com/flagman-remonta_11886169/" target="_blank"></A>
-          </LI>
-          <LI class="reviews_footer-item">
-            <A class="apoi" href="http://www.apoi.ru/flagman-remonta" target="_blank"></A>
-          </LI>
-          <LI class="reviews_footer-item">
-            <A class="otzyvypro" href="https://otzyvy.pro/category/stroitelstvo-i-remont/162513-flagman-remonta.html" target="_blank"></A>
-          </LI>
-          <LI class="reviews_footer-item">
-            <A class="otzyvru" href="http://ru.otzyv.com/flagman-remonta/" target="_blank"></A>
-          </LI>
-        </UL>
+      <div class="reviews_footer d-lg-flex justify-content-lg-center align-items-lg-center"><span class="reviews_footer-title mb-lg-0">Флагман Ремонта на сайтах-отзовиках:</span>
+        <ul class="reviews_footer-list d-flex flex-wrap flex-sm-nowrap justify-content-sm-center">
+          <li class="reviews_footer-item"><a class="yell" href="https://www.yell.ru/moscow/com/flagman-remonta_11886169/" target="_blank"></a></li>
+          <li class="reviews_footer-item"><a class="apoi" href="http://www.apoi.ru/flagman-remonta" target="_blank"></a></li>
+          <li class="reviews_footer-item"><a class="otzyvypro" href="https://otzyvy.pro/category/stroitelstvo-i-remont/162513-flagman-remonta.html" target="_blank"></a></li>
+          <li class="reviews_footer-item"><a class="otzyvru" href="http://ru.otzyv.com/flagman-remonta/" target="_blank"></a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="action" id="action">
+      <div class="container">
+        <div class="title position-relative">
+          <h2 class="action-title text-center">Реальная выгода до <span class="action-title_day"></span>!</h2>
+          <p class="action-subtitle mt-4">Скидки в процентах — тема невнятная,</p>
+          <p class="action-subtitle"><span>Мы дарим подарки</span> — любому понятные!</p>
+        </div>
+        <div class="action-content d-flex flex-wrap flex-sm-nowrap justify-content-center position-relative">
+          <div class="action-content_img action-window mb-4 mb-sm-0"></div>
+          <div class="action-content_img action-ceiling ml-sm-3"></div>
+        </div>
+        <p class="action-text text-center">Выберите свой подарок и узнайте подробности!</p>
+        <form class="action-form" action="#">
+          <input type="hidden" name="site_form_id" value="akciya-realnaya-vygoda_fs"/>
+          <input type="hidden" name="comment" value="Заявка из блока с акцией, где мы обещаем натяжные потолки или пластиковые окна в подарок вместо липовых процентных скидок как у всех"/>
+          <input class="action-form-input" type="tel" name="telefon_lida" placeholder="Ваш номер телефона"/>
+          <input class="action-form-btn" type="submit" name="action_submit" value="ВЫБРАТЬ ПОДАРОК"/>
+        </form>
+      </div>
+    </section>
+    <section id="master">
+      <div class="container">
+        <div class="title">
+          <h2>Наша команда</h2>
+        </div>
+        <div class="team_block">
+          <div class="team_nav">
+            <div><img src="upload/team/smirnov_s.jpg" alt=""/></div>
+            <div><img src="upload/team/zaitseva_s.jpg" alt=""/></div>
+            <div><img src="upload/team/mitrofanov_s.jpg" alt=""/></div>
+            <div><img src="upload/team/zavyalov_s.jpg" alt=""/></div>
+            <div><img src="upload/team/andreychenko_s.jpg" alt=""/></div>
+            <div><img src="upload/team/medvedev_s.jpg" alt=""/></div>
+          </div>
+          <div class="team_main">
+            <div>
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <header>Владимир Смирнов
+                    <p>Каменщик | 9 лет, 478 завершенных объектов</p>
+                  </header>
+                  <div class="text">Умеет выкладывать перегородки из кирпича, пеноблока, пазогребня и других материалов. Занимается кладкой печей и каминов, выкладкой арок и колонн. Кроме того, Владимира приглашаем для установки межкомнатных дверей и подоконников из камня.</div>
+                </div>
+                <div class="d-none d-md-block col-md-6"><img src="upload/team/smirnov.jpg" alt=""/></div>
+              </div>
+            </div>
+            <div>
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <header>Яна Зайцева
+                    <p>Маляр | Опыт 10 лет, 256 успешных объектов</p>
+                  </header>
+                  <div class="text">Яна работает маляром с 18 лет. Ей доверяем работу со сложными и капризными материалами: венецианской штукатуркой, краской с наполнителями, фотообоями. 97% заказчиков, у которых она работала, отмечают аккуратность и высокое качество результата.</div>
+                </div>
+                <div class="d-none d-md-block col-md-6"><img src="upload/team/zaitseva.jpg" alt=""/></div>
+              </div>
+            </div>
+            <div>
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <header>Игорь Митрофанов
+                    <p>Электрик | Опыт 5 лет</p>
+                  </header>
+                  <div class="text">Четвертая группа по электробезопасности позволяет Игорю работать практически с любым электрооборудованием. Ему доверяем работу с дизайн-проектами: он быстро и качественно устанавливает любые светильники и подсветку, разводит проводку, устанавливает необходимое оборудование и устраняет неисправности в домашних электросетях.</div>
+                </div>
+                <div class="d-none d-md-block col-md-6"><img src="upload/team/mitrofanov.jpg" alt=""/></div>
+              </div>
+            </div>
+            <div>
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <header>Александр Завьялов
+                    <p>Сантехник | 17 лет, 504 завершенных объекта</p>
+                  </header>
+                  <div class="text">Ежегодно проходит обучение, в том числе у партнеров - например, Рехау. Мастер коллекторной разводки труб, установки ванн, раковин, смесителей. Умеет работать с современной подвесной сантехникой. Устанавливает системы от протечек.</div>
+                </div>
+                <div class="d-none d-md-block col-md-6"><img src="upload/team/zavyalov.jpg" alt=""/></div>
+              </div>
+            </div>
+            <div>
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <header>Богдан Андрейченко
+                    <p>Монтажник окон | 4 года, 297 завершенных объектов</p>
+                  </header>
+                  <div class="text">Мастер установки пластиковых и деревянных окон. Ежегодно обучается, поэтому знает, как работать с современными материалами и инструментами. Умеет монтировать сложные оконные конструкции. Устанавливает минимум 3 окна в неделю.</div>
+                </div>
+                <div class="d-none d-md-block col-md-6"><img src="upload/team/andreychenko.jpg" alt=""/></div>
+              </div>
+            </div>
+            <div>
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <header>Илья Медведев
+                    <p>Прораб | Опыт 12 лет, 159 завершенных объектов</p>
+                  </header>
+                  <div class="text">Начинал с должности мастера-отделочника, затем стал универсалом, и уже после - прорабом. Поэтому Илья знает процесс ремонта квартиры от "А" до "Я". Он проходит повышение квалификации дважды в год, поэтому в курсе новых технологий и трендов в отделке помещений.</div>
+                </div>
+                <div class="d-none d-md-block col-md-6"><img src="upload/team/medvedev.jpg" alt=""/></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="credit" id="rassrochka">
@@ -1053,18 +990,63 @@
                 </LI>
               </UL>
             </div>
+            <div class="col-12">
+              <H4 class="faq-help-title">Выезд замерщика — это бесплатно и ни к чему вас не обязывает!</H4>
+              <FORM class="faq-form" id="faq_form" action="#">
+                <INPUT class="faq-form-input" type="tel" name="telefon_lida" placeholder="Ваш номер телефона" required="required"></INPUT>
+                <INPUT class="faq-form-btn" type="submit" name="faq-submit" value="ПЕРЕЗВОНИТЕ МНЕ"></INPUT>
+              </FORM>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <section id="contacts">
+      <div class="container d-md-flex p-0">
+        <div class="col-12 col-md-6 col-lg-5 contacts_block">
+          <h2>Контакты</h2>
+          <ul class="contact_list">
+            <li class="contact_item"><span class="contact_item-t"><a href="tel:74951279328">7 (495) 127-93-28</a></span>
+              <p class="contact_item-b">с 8:00 до 22:00 без выходных</p>
+            </li>
+            <li class="contact_item"><span class="contact_item-t">Есть вопросы?</span>
+              <p class="contact_item-b"><a href="mailto:info@flagmanremonta.ru">info@flagmanremonta.ru</a></p>
+            </li>
+            <li class="contact_item"><span class="contact_item-t">Адрес</span>
+              <p class="contact_item-b">г. Москва, Алтуфьевское шоссе, 29Б</p>
+            </li>
+          </ul><a class="contact_link" href="#">Вернуться к началу страницы</a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-7 map_block" id="map"></div>
+      </div>
+    </section>
+    <section class="footer" id="footer">
+      <div class="footer_t d-lg-flex align-items-center container p-0">
+        <ul class="col-12 col-lg-8 footer_nav">
+          <li class="footer_nav-item"><a class="footer_nav-link" href="#service" onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_ceny','eNI':'true', 'event': 'UAEvent' });">цены</a></li>
+          <li class="footer_nav-item"><a class="footer_nav-link" href="#portfolio" onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_portfolio','eNI':'true', 'event': 'UAEvent' });">портфолио</a></li>
+          <li class="footer_nav-item"><a class="footer_nav-link" href="#action" onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_akciya','eNI':'true', 'event': 'UAEvent' });">акция</a></li>
+          <li class="footer_nav-item"><a class="footer_nav-link" href="#rassrochka" onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_rassrochka','eNI':'true', 'event': 'UAEvent' });">рассрочка 0%</a></li>
+          <li class="footer_nav-item"><a class="footer_nav-link" href="#reviews" onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_otzivy','eNI':'true', 'event': 'UAEvent' });">отзывы</a></li>
+          <li class="footer_nav-item"><a class="footer_nav-link" href="#faq" onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_kak-zakazat','eNI':'true', 'event': 'UAEvent' });">как заказать</a></li>
+        </ul>
+        <div class="col-12 col-lg-4 footer_social"><a class="footer_social-link" href="https://vk.com/flagmanremonta" target="_blank"><span class="vk"></span></a><a class="footer_social-link" href="https://business.facebook.com/flagmanremonta/" target="_blank"><span class="fb"></span></a><a class="footer_social-link" href="https://www.instagram.com/flagmanremonta/" target="_blank"><span class="inst"></span></a><a class="footer_social-link" href="https://ok.ru/group/55037744775181" target="_blank"><span class="ok"></span></a></div>
+      </div>
+      <div class="footer_b d-md-flex justify-content-center">
+        <button class="order-md-2" type="button" data-toggle="modal" data-target="#call_polite">Политика конфиденциальности</button>
+        <p class="footer_b-text order-md-1">© <span>“ФЛАГМАН РЕМОНТА”</span> 2014-2019. Все права защищены.</p>
+      </div>
+    </section>
     <!-- build:js js/vendor.js-->
+    <script src="libs/jquery/dist/jquery.js"></script>
     <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="libs/rangeslider.js/dist/rangeslider.js"></script>
+    <script src="libs/slick-carousel/slick/slick.min.js"></script>
+    <script src="libs/lazyload.js"></script>
+    <script src="libs/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
+    <script src="libs/jquery-validation/dist/jquery.validate.js"></script>
     <script src="old/common.js"></script>
     <script src="old/common_new.js"></script>
-    <script src="libs/bootstrap/dist/js/bootstrap.min.js.map"></script>
-    <!-- endbuild-->
-    <!-- build:js js/main.js-->
-    <script src="js/main.js"></script>
     <!-- endbuild-->
   </body>
 </html>

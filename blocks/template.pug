@@ -8,6 +8,7 @@ include service/service
 include why_trust/why_trust
 include portfolio/portfolio
 include fon/fon
+include action/action
 include credit/credit
 include master/master
 include faq/faq
@@ -46,26 +47,37 @@ html(lang="ru")
 			block fon
 				+fon()
 
+			block action
+				+action()
+				
+			block master
+				+master()
+
 			block credit
 				+credit()
 
 			block faq
 				+faq()
+
+			block contacts
+				+contacts()
 			
 			block content
 				
-			//- block footer
-			//- 	+footer()
+			block footer
+				+footer()
 
 			block vendors
 				// build:js js/vendor.js
+				script(src="libs/jquery/dist/jquery.js")
 				script(src="libs/bootstrap/dist/js/bootstrap.min.js")
+				script(src="libs/rangeslider.js/dist/rangeslider.js")
+				script(src="libs/slick-carousel/slick/slick.min.js")
+				script(src="libs/lazyload.js")
+				script(src="libs/jquery.maskedinput/dist/jquery.maskedinput.js")
+				script(src="libs/jquery-validation/dist/jquery.validate.js")
 				script(src="old/common.js")
 				script(src="old/common_new.js")
-				script(src="libs/bootstrap/dist/js/bootstrap.min.js.map")
 				// endbuild
 
 			block scripts
-				// build:js js/main.js
-				script( src="js/main.js")
-				// endbuild

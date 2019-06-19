@@ -129,14 +129,17 @@ function doCalcNew(){
 	})
 }
 function sendData(category, action, label, eni) {
-	(dataLayer = window.dataLayer || []).push({
-		'eCategory': category,
-		'eAction': action,
-		'eLabel': label,
-		'eNI': eni,
-		'event': 'UAEvent'
-	});
+	// (dataLayer = window.dataLayer || []).push({
+	// 	'eCategory': category,
+	// 	'eAction': action,
+	// 	'eLabel': label,
+	// 	'eNI': eni,
+	// 	'event': 'UAEvent'
+	// });
+	return true
 }
+
+
 function doValid() {
 	$.mask.definitions['q'] = '[1, 2, 3, 4, 5, 6, 9]';
 	$('input[name = "telefon_lida"]').mask("+7(q99) 999-99-99");

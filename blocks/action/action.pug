@@ -2,19 +2,20 @@ mixin action()
   +b.SECTION.action(id="action")
     .container
       .title.position-relative
-        H2.action-title.text-center Реальная выгода до
-          SPAN.action-title_day
-          |!
-        P.action-subtitle.mt-4 Скидки в процентах — тема невнятная,
-        P.action-subtitle 
-          SPAN Мы дарим подарки
-          | — любому понятные!
+        h2.action-title.text-center
+          | Реальная выгода до 
+          span.action-title_day
+          | !
+        p.action-subtitle.mt-4 Скидки в процентах — тема невнятная,
+        p.action-subtitle
+          span Мы дарим подарки
+          |  — любому понятные!
       .action-content.d-flex.flex-wrap.flex-sm-nowrap.justify-content-center.position-relative
         .action-content_img.action-window.mb-4.mb-sm-0
         .action-content_img.action-ceiling.ml-sm-3
-      P.action-text.text-center Выберите свой подарок и узнайте подробности!
-      FORM(action="#").action-form
-        INPUT(type="hidden" name="site_form_id" value="akciya-realnaya-vygoda_fs")
-        INPUT(type="hidden" name="comment" value="Заявка из блока с акцией, где мы обещаем натяжные потолки или пластиковые окна в подарок вместо липовых процентных скидок как у всех")
-        INPUT(type="tel" class="action-form-input" name="telefon_lida" placeholder="Ваш номер телефона")
-        INPUT(type="submit" class="action-form-btn" name="action_submit" value="ВЫБРАТЬ ПОДАРОК")
+      p.action-text.text-center Выберите свой подарок и узнайте подробности!
+      form.action-form(action='#')
+        input(type='hidden', name='site_form_id', value='akciya-realnaya-vygoda_fs')
+        input(type='hidden', name='comment', value='Заявка из блока с акцией, где мы обещаем натяжные потолки или пластиковые окна в подарок вместо липовых процентных скидок как у всех')
+        input.action-form-input(type='tel', name='telefon_lida', placeholder='Ваш номер телефона')
+        input.action-form-btn(type='submit', name='action_submit', value='ВЫБРАТЬ ПОДАРОК')

@@ -3,61 +3,60 @@ mixin header()
     .container
       .row
         .col-7.col-md-3.col-lg-2
-          +e.logo
-            +e.A(href='#').logo-img
-          +e.P.logo-text Работаем с 2009 года
-        .col-12.col-md-12.col-lg-7.header__menu
-          NAV.d-none.d-lg-block
-            +e.UL.menu-top
-              LI
-                A(href="" class="active") Квартира
-              LI
-                A(href="") Квартира в новостройке
-              LI
-                A(href="") Квартира в хрущевке
-              LI
-                A(href="") Черновой ремонт
-              LI
-                A(href="") Чистовой ремонт
-          NAV.navbar.navbar-expand-lg.navbar-light
-            BUTTON(type="button", data-toggle="collapse", data-target="#dropdown_menu", aria-expanded="false", aria-controls="dropdown_menu").navbar-toggler.collapsed
-              SPAN.icon-bar.top-bar
-              SPAN.icon-bar.middle-bar
-              SPAN.icon-bar.bottom-bar
-            .collapse.navbar-collapse(id="dropdown_menu")
-              UL.navbar-nav
-                LI.nav-item.d-lg-none
-                  SELECT(id="selectMenu")
-                    OPTION(value="", selected) Квартира
-                    OPTION(value="") Квартира в новостройке
-                    OPTION(value="") Квартира в хрущевке
-                    OPTION(value="") Черновой ремонт
-                    OPTION(value="") Чистовой ремонт
-                LI.nav-item
-                  A.nav-link.anchor(href="#service") Цены
-                LI.nav-item
-                  A.nav-link.anchor(href="#portfolio") Портфолио
-                LI.nav-item
-                  A.nav-link.anchor(href="#reviews") Отзывы
-                LI.nav-item
-                  A.nav-link.anchor(href="#action") Акция
-                LI.nav-item
-                  A.nav-link.anchor(href="#rassrochka") Рассрочка 0%
-                LI.nav-item
-                  A.nav-link.anchor(href="#faq") Как заказат
-                LI.nav-item
-                  A.nav-link.anchor(href="#contacts") Контакты
+          .logo-block
+            a.logo(href='#')
+            p Работаем с 2009 года
+        .col-12.col-md-12.col-lg-7.main-menu
+          .d-none.d-lg-block
+            ul.menu_top
+              li
+                a.active(href='https://flagmanremonta.ru/', onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_s_kv','eNI':true, 'event': 'UAEvent' });") Квартира
+              li
+                a(href='https://flagmanremonta.ru/novostroyki/', onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_s_kv-novostr','eNI':true, 'event': 'UAEvent' });") Квартира в новостройке
+              li
+                a(href='https://flagmanremonta.ru/remont-hrushchevok/', onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_s_hrushchevoka','eNI':true, 'event': 'UAEvent' });") Квартира в хрущевке
+              li
+                a(href='https://flagmanremonta.ru/remont-chernovoy/', onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_s_chernovoy','eNI':true, 'event': 'UAEvent' });") Черновой ремонт
+              li
+                a(href='https://flagmanremonta.ru/remont-chistovoy/', onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_s_chistovoy','eNI':true, 'event': 'UAEvent' });") Чистовой ремонт
+          nav.navbar.navbar-expand-lg.navbar-light
+            button.navbar-toggler.collapsed(type='button', data-toggle='collapse', data-target='#dropdown_menu', aria-expanded='false', aria-controls='dropdown_menu')
+              span.icon-bar.top-bar
+              span.icon-bar.middle-bar
+              span.icon-bar.bottom-bar
+            #dropdown_menu.collapse.navbar-collapse
+              ul.navbar-nav
+                li.nav-item.d-lg-none
+                  select#selectMenu
+                    option(value='https://flagmanremonta.ru/', selected='') Квартира
+                    option(value='https://flagmanremonta.ru/novostroyki/') Квартира в новостройке
+                    option(value='https://flagmanremonta.ru/remont-hrushchevok/') Квартира в хрущевке
+                    option(value='https://flagmanremonta.ru/remont-chernovoy/') Черновой ремонт
+                    option(value='https://flagmanremonta.ru/remont-chistovoy/') Чистовой ремонт
+                li.nav-item
+                  a.nav-link.anchor(href='#service', onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_ceny','eNI':'true', 'event': 'UAEvent' });") Цены
+                li.nav-item
+                  a.nav-link.anchor(href='#portfolio', onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_portfolio','eNI':'true', 'event': 'UAEvent' });") Портфолио
+                li.nav-item
+                  a.nav-link.anchor(href='#reviews', onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_otzivy','eNI':'true', 'event': 'UAEvent' });") Отзывы
+                li.nav-item
+                  a.nav-link.anchor(href='#action', onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_akciya','eNI':'true', 'event': 'UAEvent' });") Акция
+                li.nav-item
+                  a.nav-link.anchor(href='#rassrochka', onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_rassrochka','eNI':'true', 'event': 'UAEvent' });") Рассрочка 0%
+                li.nav-item
+                  a.nav-link.anchor(href='#faq', onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_kak-zakazat','eNI':'true', 'event': 'UAEvent' });") Как заказать
+                li.nav-item
+                  a.nav-link.anchor(href='#contacts') Контакты
         .d-none.d-md-block.col-md-8.col-lg-3
-          +e.contact
+          .contact-h
             .row
               .col-12.col-md-6.col-lg-12
-                +e.time
-                  SPAN 8:00-22:00 
-                  | без выходных
-                +e.phone.call_phone_1
-                  A(href="tel:74951279328")
-                    |7 (495) 127-93-28
+                .time
+                  span 8:00-22:00
+                  |  без выходных
+                .phone.call_phone_1
+                  a(href='tel:74951279328') 7 (495) 127-93-28
               .col-12.col-md-6.col-lg-12
                 .call-h.d-none.d-md-block
-                  +e.BUTTON.btn2.btn2(type="button" data-toggle="modal" data-target="#call_header")
-                    SPAN Заказать звонок
+                  button.btn2(type='button', data-toggle='modal', data-target='#call_header')
+                    span Заказать звонок

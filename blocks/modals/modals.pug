@@ -1,0 +1,451 @@
+mixin modals()
+  #call_calc.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-header
+          header Ваши данные отправлены сметчику!
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+        form#call_calc_form
+          p
+            | Он рассчитает 
+            span.color
+              | стоимость 
+              span#rem_type
+              |  в вашей 
+              span#rem_count
+              |  c площадью 
+              span#rem_area
+              |  м
+              sup 2
+            | .
+          p Оставьте свой номер, чтобы узнать цену!
+          input(type='tel', name='telefon_lida', placeholder='Ваш номер телефона')
+          input(type='hidden', name='site_form_id', value='1ekr_fs_kalkulator-4-shaga')
+          input(type='hidden', name='comment', value='')
+          input(type='hidden', name='sait', value='flagmanremonta.ru/index.php')
+          input(type='hidden', name='1_referer', value='')
+          input(type='hidden', name='ip_lida', value='37.115.92.82')
+          input(type='hidden', name='utm_source', value='')
+          input(type='hidden', name='utm_medium', value='')
+          input(type='hidden', name='utm_campaign', value='')
+          input(type='hidden', name='utm_term', value='')
+          input(type='hidden', name='utm_content', value='')
+          input(type='hidden', name='utm_keyword', value='')
+          input(type='hidden', name='str_perehoda', value='flagmanremonta.ru/')
+          input(type='hidden', name='metka', value='')
+          input(type='hidden', name='ya_google', value='')
+          input(type='hidden', name='marketdata', value='')
+          input(type='hidden', name='utm', value='')
+          input(type='hidden', name='istochnik', value='Реферал')
+          p Отправляя заявку, Вы бесплатно получите ссылку на памятку по ремонту!
+          span.download.pdf памятка
+          input.btn(type='submit', value='РАССЧИТАТЬ')
+
+
+
+
+//- Modal call-header
+
+#call_header.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content
+      .modal-header
+        header ОСТАВЬТЕ ВАШИ КОНТАКТЫ ДЛЯ ЗАКАЗА ЗВОНКА
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      form#call_header_form
+        input(type='text', name='ima_kl', placeholder='Ваше имя')
+        input(type='tel', name='telefon_lida', placeholder='Ваш номер телефона')
+        input(type='hidden', name='site_form_id', value='menu_fs_zakazat-zvonok')
+        input(type='hidden', name='sait', value='flagmanremonta.ru/index.php')
+        input(type='hidden', name='1_referer', value='')
+        input(type='hidden', name='ip_lida', value='37.115.92.82')
+        input(type='hidden', name='utm_source', value='')
+        input(type='hidden', name='utm_medium', value='')
+        input(type='hidden', name='utm_campaign', value='')
+        input(type='hidden', name='utm_term', value='')
+        input(type='hidden', name='utm_content', value='')
+        input(type='hidden', name='utm_keyword', value='')
+        input(type='hidden', name='str_perehoda', value='flagmanremonta.ru/')
+        input(type='hidden', name='metka', value='')
+        input(type='hidden', name='ya_google', value='')
+        input(type='hidden', name='marketdata', value='')
+        input(type='hidden', name='utm', value='')
+        input(type='hidden', name='istochnik', value='Реферал')
+        p Отправляя заявку, Вы бесплатно получите ссылку на памятку по ремонту!
+        span.download.pdf памятка
+        input.btn(type='submit', value='ЗАКАЗАТЬ ЗВОНОК')
+
+
+
+//- Modal call_service1
+
+#call_service1.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content
+      .modal-header
+        header ОСТАВЬТЕ ЗАЯВКУ НА БЕСПЛАТНЫЙ РАСЧЕТ СТОИМОСТИ РЕМОНТА
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      form#call_service_form1
+        input(type='text', name='ima_kl', placeholder='Ваше имя')
+        input(type='tel', name='telefon_lida', placeholder='Ваш номер телефона')
+        input(type='hidden', name='site_form_id', value='tarif_fs_kosmeticheskiy')
+        input(type='hidden', name='sait', value='flagmanremonta.ru/index.php')
+        input(type='hidden', name='1_referer', value='')
+        input(type='hidden', name='ip_lida', value='37.115.92.82')
+        input(type='hidden', name='utm_source', value='')
+        input(type='hidden', name='utm_medium', value='')
+        input(type='hidden', name='utm_campaign', value='')
+        input(type='hidden', name='utm_term', value='')
+        input(type='hidden', name='utm_content', value='')
+        input(type='hidden', name='utm_keyword', value='')
+        input(type='hidden', name='str_perehoda', value='flagmanremonta.ru/')
+        input(type='hidden', name='metka', value='')
+        input(type='hidden', name='ya_google', value='')
+        input(type='hidden', name='marketdata', value='')
+        input(type='hidden', name='utm', value='')
+        input(type='hidden', name='istochnik', value='Реферал')
+        p Отправляя заявку, Вы бесплатно получите ссылку на памятку по ремонту!
+        span.download.pdf памятка
+        input.btn(type='submit', value='УЗНАТЬ СТОИМОСТЬ')
+
+
+
+
+//- call_service2
+
+#call_service2.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content
+      .modal-header
+        header ОСТАВЬТЕ ЗАЯВКУ НА БЕСПЛАТНЫЙ РАСЧЕТ СТОИМОСТИ РЕМОНТА
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      form#call_service_form2
+        input(type='text', name='ima_kl', placeholder='Ваше имя')
+        input(type='tel', name='telefon_lida', placeholder='Ваш номер телефона')
+        input(type='hidden', name='site_form_id', value='tarif_fs_kapitalniy')
+        input(type='hidden', name='sait', value='flagmanremonta.ru/index.php')
+        input(type='hidden', name='1_referer', value='')
+        input(type='hidden', name='ip_lida', value='37.115.92.82')
+        input(type='hidden', name='utm_source', value='')
+        input(type='hidden', name='utm_medium', value='')
+        input(type='hidden', name='utm_campaign', value='')
+        input(type='hidden', name='utm_term', value='')
+        input(type='hidden', name='utm_content', value='')
+        input(type='hidden', name='utm_keyword', value='')
+        input(type='hidden', name='str_perehoda', value='flagmanremonta.ru/')
+        input(type='hidden', name='metka', value='')
+        input(type='hidden', name='ya_google', value='')
+        input(type='hidden', name='marketdata', value='')
+        input(type='hidden', name='utm', value='')
+        input(type='hidden', name='istochnik', value='Реферал')
+        p Отправляя заявку, Вы бесплатно получите ссылку на памятку по ремонту!
+        span.download.pdf памятка
+        input.btn(type='submit', value='УЗНАТЬ СТОИМОСТЬ')
+
+
+//- call_service3
+
+#call_service3.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content
+      .modal-header
+        header ОСТАВЬТЕ ЗАЯВКУ НА БЕСПЛАТНЫЙ РАСЧЕТ СТОИМОСТИ РЕМОНТА
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      form#call_service_form3
+        input(type='text', name='ima_kl', placeholder='Ваше имя')
+        input(type='tel', name='telefon_lida', placeholder='Ваш номер телефона')
+        input(type='hidden', name='site_form_id', value='tarif_fs_pod-kluch')
+        input(type='hidden', name='sait', value='flagmanremonta.ru/index.php')
+        input(type='hidden', name='1_referer', value='')
+        input(type='hidden', name='ip_lida', value='37.115.92.82')
+        input(type='hidden', name='utm_source', value='')
+        input(type='hidden', name='utm_medium', value='')
+        input(type='hidden', name='utm_campaign', value='')
+        input(type='hidden', name='utm_term', value='')
+        input(type='hidden', name='utm_content', value='')
+        input(type='hidden', name='utm_keyword', value='')
+        input(type='hidden', name='str_perehoda', value='flagmanremonta.ru/')
+        input(type='hidden', name='metka', value='')
+        input(type='hidden', name='ya_google', value='')
+        input(type='hidden', name='marketdata', value='')
+        input(type='hidden', name='utm', value='')
+        input(type='hidden', name='istochnik', value='Реферал')
+        p Отправляя заявку, Вы бесплатно получите ссылку на памятку по ремонту!
+        span.download.pdf памятка
+        input.btn(type='submit', value='УЗНАТЬ СТОИМОСТЬ')
+
+
+
+
+//- call_portf
+
+#call_portf.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content
+      .modal-header
+        header ОСТАВЬТЕ ЗАЯВКУ НА БЕСПЛАТНЫЙ РАСЧЕТ СТОИМОСТИ РЕМОНТА
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      form#call_portfolio_form
+        input(type='text', name='ima_kl', placeholder='Ваше имя')
+        input(type='tel', name='telefon_lida', placeholder='Ваш номер телефона')
+        input(type='hidden', name='site_form_id', value='portfolio_fs_hochu-takje')
+        input(type='hidden', name='sait', value='flagmanremonta.ru/index.php')
+        input(type='hidden', name='1_referer', value='')
+        input(type='hidden', name='ip_lida', value='37.115.92.82')
+        input(type='hidden', name='utm_source', value='')
+        input(type='hidden', name='utm_medium', value='')
+        input(type='hidden', name='utm_campaign', value='')
+        input(type='hidden', name='utm_term', value='')
+        input(type='hidden', name='utm_content', value='')
+        input(type='hidden', name='utm_keyword', value='')
+        input(type='hidden', name='str_perehoda', value='flagmanremonta.ru/')
+        input(type='hidden', name='metka', value='')
+        input(type='hidden', name='ya_google', value='')
+        input(type='hidden', name='marketdata', value='')
+        input(type='hidden', name='utm', value='')
+        input(type='hidden', name='istochnik', value='Реферал')
+        p Отправляя заявку, Вы бесплатно получите ссылку на памятку по ремонту!
+        span.download.pdf памятка
+        input.btn(type='submit', value='РАССЧИТАТЬ')
+
+
+
+//- call_faq
+
+#call_faq.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content
+      .modal-header
+        header ОСТАВЬТЕ ЗАЯВКУ НА БЕСПЛАТНЫЙ РАСЧЕТ РЕМОНТА
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      form#faq_form
+        input(type='text', name='ima_kl', placeholder='Ваше имя')
+        input(type='tel', name='telefon_lida', placeholder='Ваш номер телефона')
+        input(type='hidden', name='site_form_id', value='')
+        input(type='hidden', name='sait', value='flagmanremonta.ru/index.php')
+        input(type='hidden', name='1_referer', value='')
+        input(type='hidden', name='ip_lida', value='37.115.92.82')
+        input(type='hidden', name='utm_source', value='')
+        input(type='hidden', name='utm_medium', value='')
+        input(type='hidden', name='utm_campaign', value='')
+        input(type='hidden', name='utm_term', value='')
+        input(type='hidden', name='utm_content', value='')
+        input(type='hidden', name='utm_keyword', value='')
+        input(type='hidden', name='str_perehoda', value='flagmanremonta.ru/')
+        input(type='hidden', name='metka', value='')
+        input(type='hidden', name='ya_google', value='')
+        input(type='hidden', name='marketdata', value='')
+        input(type='hidden', name='utm', value='')
+        input(type='hidden', name='istochnik', value='Реферал')
+        p Отправляя заявку, Вы бесплатно получите ссылку на памятку по ремонту!
+        span.download.pdf памятка
+        input.btn(type='submit', value='РАССЧИТАТЬ')
+
+
+
+//- call_action
+
+#call_action.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content
+      .modal-header
+        header ОСТАВЬТЕ ЗАЯВКУ НА БЕСПЛАТНЫЙ ЗАМЕР И ЗАФИКСИРУЙТЕ СКИДКУ
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      form#call_action_form
+        input(type='text', name='ima_kl', placeholder='Ваше имя')
+        input(type='tel', name='telefon_lida', placeholder='Ваш номер телефона')
+        input(type='hidden', name='site_form_id', value='akciya-NG_fs_poluchit-skidku19-do-210119')
+        input(type='hidden', name='sait', value='flagmanremonta.ru/index.php')
+        input(type='hidden', name='1_referer', value='')
+        input(type='hidden', name='ip_lida', value='37.115.92.82')
+        input(type='hidden', name='utm_source', value='')
+        input(type='hidden', name='utm_medium', value='')
+        input(type='hidden', name='utm_campaign', value='')
+        input(type='hidden', name='utm_term', value='')
+        input(type='hidden', name='utm_content', value='')
+        input(type='hidden', name='utm_keyword', value='')
+        input(type='hidden', name='str_perehoda', value='flagmanremonta.ru/')
+        input(type='hidden', name='metka', value='')
+        input(type='hidden', name='ya_google', value='')
+        input(type='hidden', name='marketdata', value='')
+        input(type='hidden', name='utm', value='')
+        input(type='hidden', name='istochnik', value='Реферал')
+        p Отправляя заявку, Вы бесплатно получите ссылку на памятку по ремонту!
+        span.download.pdf памятка
+        input.btn(type='submit', value='ЗАФИКСИРОВАТЬ СКИДКУ')
+
+
+
+//- call_polite
+
+#call_polite.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered.modal-lg(role='document')
+    .modal-content
+      .modal-header
+        header ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        .modal-title Политика конфиденциальности
+        .description
+          p г. Москва
+          .text-center «15» февраля 2017 г.
+          p
+            | Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности) действует в отношении всей информации, которую сайт компании «Флагман Ремонта», расположенный на доменном имени flagmanremonta.ru, может получить о Пользователе во время использования сайта, программ и продуктов компании.
+          .content
+            h4 1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ 
+            h5 1.1 В настоящей Политике конфиденциальности используются следующие термины:
+            h5
+              | 1.1.1. «Администрация сайта flagmanremonta.ru (далее – Администрация сайта) » – уполномоченные сотрудники на управления сайтом, действующие от имени Название организации, которые организуют и (или) осуществляет обработку персональных данных, а также определяет цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными.
+            h5
+              | 1.1.2. «Персональные данные» - любая информация, относящаяся к прямо или косвенно определенному или определяемому физическому лицу (субъекту персональных данных).
+            h5
+              | 1.1.3. «Обработка персональных данных» - любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных.
+            h5
+              | 1.1.4. «Конфиденциальность персональных данных» - обязательное для соблюдения Оператором или иным получившим доступ к персональным данным лицом требование не допускать их распространения без согласия субъекта персональных данных или наличия иного законного основания.
+            h5
+              | 1.1.5. «Пользователь сайта flagmanremonta.ru (далее ? Пользователь)» – лицо, имеющее доступ к Сайту, посредством сети Интернет и использующее Сайт flagmanremonta.ru.
+            h5
+              | 1.1.6. «Cookies» — небольшой фрагмент данных, отправленный веб-сервером и хранимый на компьютере пользователя, который веб-клиент или веб-браузер каждый раз пересылает веб-серверу в HTTP-запросе при попытке открыть страницу соответствующего сайта.
+            h5
+              | 1.1.7. «IP-адрес» — уникальный сетевой адрес узла в компьютерной сети, построенной по протоколу IP.
+            h4 2. ОБЩИЕ ПОЛОЖЕНИЯ
+            h5
+              | 2.1. Использование Пользователем сайта flagmanremonta.ru означает согласие с настоящей Политикой конфиденциальности и условиями обработки персональных данных Пользователя.
+            h5
+              | 2.2. В случае несогласия с условиями Политики конфиденциальности Пользователь должен прекратить использование сайта flagmanremonta.ru.
+            h5
+              | 2.3.Настоящая Политика конфиденциальности применяется только к сайту flagmanremonta.ru. Комапния "Флагман Ремонта" не контролирует и не несет ответственность за сайты третьих лиц, на которые Пользователь может перейти по ссылкам, доступным на сайте flagmanremonta.ru.
+            h5
+              | 2.4. Администрация сайта не проверяет достоверность персональных данных, предоставляемых Пользователем сайта flagmanremonta.ru.
+            h4 3. ПРЕДМЕТ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ
+            h5
+              | 3.1. Настоящая Политика конфиденциальности устанавливает обязательства Администрации сайта flagmanremonta.ru по неразглашению и обеспечению режима защиты конфиденциальности персональных данных, которые Пользователь предоставляет при заявке с сайта flagmanremonta.ru.
+            h5
+              | 3.2. Персональные данные, разрешённые к обработке в рамках настоящей Политики конфиденциальности, предоставляются Пользователем путём заполнения формы на Сайте flagmanremonta.ru и включают в себя следующую информацию:
+            h5 3.2.1. фамилию, имя, отчество Пользователя;
+            h5 3.2.2. контактный телефон Пользователя;
+            h5 3.2.3. адрес электронной почты (e-mail);
+            h5 3.2.4. адрес доставки Товара;
+            h5 3.2.5. место жительство Пользователя.
+            h5
+              | 3.3. "Флагман Ремонта" защищает Данные, которые автоматически передаются в процессе просмотра рекламных блоков и при посещении страниц, на которых установлен статистический скрипт системы ("пиксель"):
+            ul
+              li IP адрес;
+              li информация из cookies;
+              li
+                | информация о браузере (или иной программе, которая осуществляет доступ к показу рекламы);
+              li время доступа;
+              li адрес страницы, на которой расположен рекламный блок;
+              li реферер (адрес предыдущей страницы).
+            h5
+              | 3.3.1. Отключение cookies может повлечь невозможность доступа к частям сайта flagmanremonta.ru, требующим авторизации.
+            h5
+              | 3.3.2. Сайт осуществляет сбор статистики об IP-адресах своих посетителей. Данная информация используется с целью выявления и решения технических проблем, для контроля законности проводимых финансовых платежей.
+            h5
+              | 3.4. Любая иная персональная информация неоговоренная выше (история покупок, используемые браузеры и операционные системы и т.д.) подлежит надежному хранению и нераспространению, за исключением случаев, предусмотренных в п.п. 5.2. и 5.3. настоящей Политики конфиденциальности.
+            h4 4. ЦЕЛИ СБОРА ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ ПОЛЬЗОВАТЕЛЯ
+            h5
+              | 4.1. Персональные данные Пользователя Администрация сайта flagmanremonta.ru может использовать в целях:
+            h5
+              | 4.1.1. Идентификации Пользователя, зарегистрированного на сайте flagmanremonta.ru, для оформления заказа.
+            h5
+              | 4.1.2. Предоставления Пользователю доступа к персонализированным ресурсам Сайта flagmanremonta.ru.
+            h5
+              | 4.1.3. Установления с Пользователем обратной связи, включая направление уведомлений, запросов, касающихся использования Сайта flagmanremonta.ru, оказания услуг, обработка запросов и заявок от Пользователя.
+            h5
+              | 4.1.4. Определения места нахождения Пользователя для обеспечения безопасности, предотвращения мошенничества.
+            h5
+              | 4.1.5. Подтверждения достоверности и полноты персональных данных, предоставленных Пользователем.
+            h4 5. СПОСОБЫ И СРОКИ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ
+            h5
+              | 5.1. Обработка персональных данных Пользователя осуществляется без ограничения срока, любым законным способом, в том числе в информационных системах персональных данных с использованием средств автоматизации или без использования таких средств.
+            h5
+              | 5.2. Персональные данные Пользователя могут быть переданы уполномоченным органам государственной власти Российской Федерации только по основаниям и в порядке, установленным законодательством Российской Федерации.
+            h5
+              | 5.3. При утрате или разглашении персональных данных Администрация сайта информирует Пользователя об утрате или разглашении персональных данных.
+            h5
+              | 5.4. Администрация сайта принимает необходимые организационные и технические меры для защиты персональной информации Пользователя от неправомерного или случайного доступа, уничтожения, изменения, блокирования, копирования, распространения, а также от иных неправомерных действий третьих лиц.
+            h5
+              | 5.5. Администрация сайта совместно с Пользователем принимает все необходимые меры по предотвращению убытков или иных отрицательных последствий, вызванных утратой или разглашением персональных данных Пользователя.
+            h4 6. ОБЯЗАТЕЛЬСТВА СТОРОН
+            h5 6.1. Пользователь обязан:
+            h5
+              | 6.1.1. Предоставить информацию о персональных данных, необходимую для пользования Сайтом flagmanremonta.ru.
+            h5
+              | 6.1.2. Обновить, дополнить предоставленную информацию о персональных данных в случае изменения данной информации.
+            h5 6.2. Администрация сайта обязана:
+            h5
+              | 6.2.1. Использовать полученную информацию исключительно для целей, указанных в п. 4 настоящей Политики конфиденциальности.
+            h5
+              | 6.2.2. Обеспечить хранение конфиденциальной информации в тайне, не разглашать без предварительного письменного разрешения Пользователя, а также не осуществлять продажу, обмен, опубликование, либо разглашение иными возможными способами переданных персональных данных Пользователя, за исключением п.п. 5.2. и 5.3. настоящей Политики Конфиденциальности.
+            h5
+              | 6.2.3. Принимать меры предосторожности для защиты конфиденциальности персональных данных Пользователя согласно порядку, обычно используемого для защиты такого рода информации в существующем деловом обороте.
+            h5
+              | 6.2.4. Осуществить блокирование персональных данных, относящихся к соответствующему Пользователю, с момента обращения или запроса Пользователя или его законного представителя либо уполномоченного органа по защите прав субъектов персональных данных на период проверки, в случае выявления недостоверных персональных данных или неправомерных действий.
+            h4 7. ОТВЕТСТВЕННОСТЬ СТОРОН
+            h5
+              | 7.1. Администрация сайта, не исполнившая свои обязательства, несёт ответственность за убытки, понесённые Пользователем в связи с неправомерным использованием персональных данных, в соответствии с законодательством Российской Федерации, за исключением случаев, предусмотренных п.п. 5.2., 5.3. и 7.2. настоящей Политики Конфиденциальности.
+            h5
+              | 7.2. В случае утраты или разглашения Конфиденциальной информации Администрация сайта не несёт ответственность, если данная конфиденциальная информация:
+            h5 7.2.1. Стала публичным достоянием до её утраты или разглашения.
+            h5
+              | 7.2.2. Была получена от третьей стороны до момента её получения Администрацией сайта.
+            h5 7.2.3. Была разглашена с согласия Пользователя.
+            h4 8. РАЗРЕШЕНИЕ СПОРОВ
+            h5
+              | 8.1. До обращения в суд с иском по спорам, возникающим из отношений между Пользователем сайта flagmanremonta.ru и Администрацией сайта, обязательным является предъявление претензии (письменного предложения о добровольном урегулировании спора).
+            h5
+              | 8.2 .Получатель претензии в течение 30 календарных дней со дня получения претензии, письменно уведомляет заявителя претензии о результатах рассмотрения претензии.
+            h5
+              | 8.3. При не достижении соглашения спор будет передан на рассмотрение в судебный орган в соответствии с действующим законодательством Российской Федерации.
+            h5
+              | 8.4. К настоящей Политике конфиденциальности и отношениям между Пользователем и Администрацией сайта применяется действующее законодательство Российской Федерации.
+            h4 9. ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ
+            h5
+              | 9.1. Администрация сайта вправе вносить изменения в настоящую Политику конфиденциальности без согласия Пользователя.
+            h5
+              | 9.2. Новая Политика конфиденциальности вступает в силу с момента ее размещения на Сайте flagmanremonta.ru, если иное не предусмотрено новой редакцией Политики конфиденциальности.
+            h5
+              | 9.3. Все предложения или вопросы по настоящей Политике конфиденциальности следует сообщать указать раздел сайта flagmanremonta.ru.
+            h5
+              | 9.4. Действующая Политика конфиденциальности размещена на странице по адресу flagmanremonta.ru
+
+
+
+//- reviewsFormsModal
+
+#reviewsFormsModal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered.modal-lg(role='document')
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body.d-flex
+        img.reviews_forms-modal_img.mx-auto(src='#', alt='image')
+
+
+
+//- .phone_m.d-md-none
+
+.phone_m.d-md-none
+  .phone.call_phone_1
+    a(href='tel:74951279328') 7 (495) 127-93-28
+  button.btn(type='button') Позвонить
+
+script.
+  function onSessionCallValue(call_val, sp_id){
+  jQuery(document).ready(function(){
+  jQuery('form').each(function(){
+  jQuery(this).append('<input type="hidden" value="'+call_val+'" name="call_value">');
+  });
+  });
+  }

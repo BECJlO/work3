@@ -1,111 +1,108 @@
 mixin fon()
   +b.SECTION.fon.container
     .title
-      H2 Отзывы клиентов
+      h2 Отзывы клиентов
     .reviews_main
-      UL.nav.nav-tabs.container.p-0(id="myTab", role="tablist")
-        LI.nav-item
-          A(id="video-tab", data-toggle="tab", href="#video", role="tab", aria-controls="video", aria-selected="true").nav-link.active Видеоотзывы
-        LI.nav-item
-          A(id="form-tab", data-toggle="tab", href="#form", role="tab", aria-controls="form", aria-selected="false").nav-link Анкеты
-        LI.nav-item
-          A(id="printed-tab", data-toggle="tab", href="#printed", role="tab", aria-controls="printed", aria-selected="false").nav-link Печатные
-      .tab-content(id="myTabContent")
-        .reviews_video.container.tab-pane.fade.show.active(id="video" role="tabpanel" aria-labelledby="video-tab")
+      ul#myTab.nav.nav-tabs.container.p-0(role='tablist')
+        li.nav-item
+          a#video-tab.nav-link.active(data-toggle='tab', href='#video', role='tab', aria-controls='video', aria-selected='true') Видеоотзывы
+        li.nav-item
+          a#form-tab.nav-link(data-toggle='tab', href='#form', role='tab', aria-controls='form', aria-selected='false') Анкеты
+        li.nav-item
+          a#printed-tab.nav-link(data-toggle='tab', href='#printed', role='tab', aria-controls='printed', aria-selected='false') Печатные
+      #myTabContent.tab-content
+        #video.reviews_video.container.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='video-tab')
           .video_slide
             .videoWrapper.yt_video1
-              IMG(data-lazy="img/video1.jpg" alt="video" width="100%")
-            P.video_f Ремонт квартиры на ул. Новой, г. Реутов, Московская обл.
+              img(data-lazy='img/video1.jpg', alt='video', width='100%')
+            p.video_f Ремонт квартиры на ул. Новой, г. Реутов, Московская обл.
           .video_slide
             .videoWrapper.yt_video2
-              IMG(data-lazy="img/video2.jpg" alt="video" width="100%")
-            P.video_f Ремонт квартиры на Ново-Молоковском б-ре, г. Москва
+              img(data-lazy='img/video2.jpg', alt='video', width='100%')
+            p.video_f Ремонт квартиры на Ново-Молоковском б-ре, г. Москва
           .video_slide
             .videoWrapper.yt_video3
-              IMG(data-lazy="img/video3.jpg" alt="video" width="100%")
-            P.video_f Ремонт квартиры на ул. Юбилейной, г. Мытищи, Московская обл.
-        .reviews_forms.container.tab-pane.fade(id="form" role="tabpanel" aria-labelledby="form-tab")
+              img(data-lazy='img/video3.jpg', alt='video', width='100%')
+            p.video_f Ремонт квартиры на ул. Юбилейной, г. Мытищи, Московская обл.
+        #form.reviews_forms.container.tab-pane.fade(role='tabpanel', aria-labelledby='form-tab')
           .forms_slide
-            IMG(data-lazy="upload/forms/form1.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal")
+            img(data-lazy='upload/forms/form1.jpg', alt='image', data-toggle='modal', data-target='#reviewsFormsModal')
           .forms_slide
-            IMG(data-lazy="upload/forms/form2.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal")
+            img(data-lazy='upload/forms/form2.jpg', alt='image', data-toggle='modal', data-target='#reviewsFormsModal')
           .forms_slide
-            IMG(data-lazy="upload/forms/form3.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal")
+            img(data-lazy='upload/forms/form3.jpg', alt='image', data-toggle='modal', data-target='#reviewsFormsModal')
           .forms_slide
-            IMG(data-lazy="upload/forms/form4.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal")
+            img(data-lazy='upload/forms/form4.jpg', alt='image', data-toggle='modal', data-target='#reviewsFormsModal')
           .forms_slide
-            IMG(data-lazy="upload/forms/form5.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal")
+            img(data-lazy='upload/forms/form5.jpg', alt='image', data-toggle='modal', data-target='#reviewsFormsModal')
           .forms_slide
-            IMG(data-lazy="upload/forms/form6.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal")
+            img(data-lazy='upload/forms/form6.jpg', alt='image', data-toggle='modal', data-target='#reviewsFormsModal')
           .forms_slide
-            IMG(data-lazy="upload/forms/form7.jpg" alt="image" data-toggle="modal" data-target="#reviewsFormsModal")
-        .reviews_printed.container.tab-pane.fade(id="printed" role="tabpanel" aria-labelledby="printed-tab")
+            img(data-lazy='upload/forms/form7.jpg', alt='image', data-toggle='modal', data-target='#reviewsFormsModal')
+        #printed.reviews_printed.container.tab-pane.fade(role='tabpanel', aria-labelledby='printed-tab')
           .printed_slide.position-relative
             .printed_slide-title.d-flex.align-items-center
-              IMG(data-lazy="upload/review/udaltsova.jpg" alt="photo").rounded-circle
-              P Мария Удальцова<br>
-                SPAN заказчик
-            P.printed_slide-text Мы обратились во Флагман Ремонта, чтобы отремонтировать квартиру под ключ. Точнее, в ремонте нуждались 2 комнаты и коридор. Кухню и санузел мы делали с другой компанией, и нам не понравилось: дорого, долго и с кучей недоработок, которые потом еле устранили. Рабочими Флагмана мы довольны на все 100%: все вовремя и как надо.
+              img.rounded-circle(data-lazy='upload/review/udaltsova.jpg', alt='photo')
+              p
+                | Мария Удальцова
+                br
+                span заказчик
+            p.printed_slide-text
+              | Мы обратились во Флагман Ремонта, чтобы отремонтировать квартиру под ключ. Точнее, в ремонте нуждались 2 комнаты и коридор. Кухню и санузел мы делали с другой компанией, и нам не понравилось: дорого, долго и с кучей недоработок, которые потом еле устранили. Рабочими Флагмана мы довольны на все 100%: все вовремя и как надо.
           .printed_slide.position-relative
             .printed_slide-title.d-flex.align-items-center.w-100
-              IMG(data-lazy="upload/review/dolgopolova.jpg" alt="photo").rounded-circle
-              P Алена Долгополова<br>
-                SPAN заказчик
-            P.printed_slide-text Купили трешку-вторичку. Ремонт поручили «Флагману Ремонта»: нужно было выровнять стены и полы, сделать натяжные потолки. Ребята отлично справились! И мне особенно понравилось, что помогли с подбором материалов и даже выбрали ярко-оранжевый потолок для коридора, в тон стенам. Теперь настроение сразу улучшается, как приходим домой. Рекомендуем!
+              img.rounded-circle(data-lazy='upload/review/dolgopolova.jpg', alt='photo')
+              p
+                | Алена Долгополова
+                br
+                span заказчик
+            p.printed_slide-text
+              | Купили трешку-вторичку. Ремонт поручили «Флагману Ремонта»: нужно было выровнять стены и полы, сделать натяжные потолки. Ребята отлично справились! И мне особенно понравилось, что помогли с подбором материалов и даже выбрали ярко-оранжевый потолок для коридора, в тон стенам. Теперь настроение сразу улучшается, как приходим домой. Рекомендуем!
           .printed_slide.position-relative
             .printed_slide-title.d-flex.align-items-center
-              IMG(data-lazy="upload/review/nesmeyanova.jpg" alt="photo").rounded-circle
-              P Ольга Несмеянова<br>
-                SPAN заказчик
-            P.printed_slide-text «Флагман Ремонта» мне посоветовала тетя, ей они делали ремонт в квартире. Мы же пригласили их в купленную новостройку. Всего за 2,5 месяца они отремонтировали нашу 4-комнатную квартиру от и до. Кроме того, помогли с перепланировкой на этапе согласования: в семье 5 человек, поэтому мы решили разделить совмещенный санузел.
+              img.rounded-circle(data-lazy='upload/review/nesmeyanova.jpg', alt='photo')
+              p
+                | Ольга Несмеянова
+                br
+                span заказчик
+            p.printed_slide-text
+              | «Флагман Ремонта» мне посоветовала тетя, ей они делали ремонт в квартире. Мы же пригласили их в купленную новостройку. Всего за 2,5 месяца они отремонтировали нашу 4-комнатную квартиру от и до. Кроме того, помогли с перепланировкой на этапе согласования: в семье 5 человек, поэтому мы решили разделить совмещенный санузел.
           .printed_slide.position-relative
             .printed_slide-title.d-flex.align-items-center
-              IMG(data-lazy="upload/review/ziborov.jpg" alt="photo").rounded-circle
-              P Олег Зиборов<br>
-                SPAN заказчик
-            P.printed_slide-text С супругой наконец-то приобрели квартиру. Предыдущие владельцы не так давно делали ремонт, но мы все же решили частично переделать под себя. Нашли в интернете «Флагман Ремонта», обратились. Мужики рукастые, все сделали на 5+. Капитальный ремонт нам был нужен только в ванной, в комнате, коридоре и на кухне — косметика.
+              img.rounded-circle(data-lazy='upload/review/ziborov.jpg', alt='photo')
+              p
+                | Олег Зиборов
+                br
+                span заказчик
+            p.printed_slide-text
+              | С супругой наконец-то приобрели квартиру. Предыдущие владельцы не так давно делали ремонт, но мы все же решили частично переделать под себя. Нашли в интернете «Флагман Ремонта», обратились. Мужики рукастые, все сделали на 5+. Капитальный ремонт нам был нужен только в ванной, в комнате, коридоре и на кухне — косметика.
           .printed_slide.position-relative
             .printed_slide-title.d-flex.align-items-center
-              IMG(data-lazy="upload/review/deeva.jpg" alt="photo").rounded-circle
-              P Марина Деева<br>
-                SPAN заказчик
-            P.printed_slide-text Я пригласила ребят, чтобы переклеить обои в кухне и коридоре, выложить плиткой "фартук" и полностью отремонтировать ванную. Порадовала скромная сумма сметы и быстрые сроки - не мусолили полгода, а сделали всего за 3 недели. Спасибо "Флагману ремонта"!
+              img.rounded-circle(data-lazy='upload/review/deeva.jpg', alt='photo')
+              p
+                | Марина Деева
+                br
+                span заказчик
+            p.printed_slide-text
+              | Я пригласила ребят, чтобы переклеить обои в кухне и коридоре, выложить плиткой "фартук" и полностью отремонтировать ванную. Порадовала скромная сумма сметы и быстрые сроки - не мусолили полгода, а сделали всего за 3 недели. Спасибо "Флагману ремонта"!
           .printed_slide.position-relative
             .printed_slide-title.d-flex.align-items-center
-              IMG(data-lazy="upload/review/deeva.jpg" alt="photo").rounded-circle
-              P Марина Деева<br>
-                SPAN заказчик
-            P.printed_slide-text Я пригласила ребят, чтобы переклеить обои в кухне и коридоре, выложить плиткой "фартук" и полностью отремонтировать ванную. Порадовала скромная сумма сметы и быстрые сроки - не мусолили полгода, а сделали всего за 3 недели. Спасибо "Флагману ремонта"!
-          .printed_slide.position-relative
-            .printed_slide-title.d-flex.align-items-center
-              IMG(data-lazy="upload/review/deeva.jpg" alt="photo").rounded-circle
-              P Марина Деева<br>
-                SPAN заказчик
-            P.printed_slide-text Я пригласила ребят, чтобы переклеить обои в кухне и коридоре, выложить плиткой "фартук" и полностью отремонтировать ванную. Порадовала скромная сумма сметы и быстрые сроки - не мусолили полгода, а сделали всего за 3 недели. Спасибо "Флагману ремонта"!
-          .printed_slide.position-relative
-            .printed_slide-title.d-flex.align-items-center
-              IMG(data-lazy="upload/review/deeva.jpg" alt="photo").rounded-circle
-              P Марина Деева<br>
-                SPAN заказчик
-            P.printed_slide-text Я пригласила ребят, чтобы переклеить обои в кухне и коридоре, выложить плиткой "фартук" и полностью отремонтировать ванную. Порадовала скромная сумма сметы и быстрые сроки - не мусолили полгода, а сделали всего за 3 недели. Спасибо "Флагману ремонта"!
-          .printed_slide.position-relative
-            .printed_slide-title.d-flex.align-items-center
-              IMG(data-lazy="upload/review/deeva.jpg" alt="photo").rounded-circle
-              P Марина Деева<br>
-                SPAN заказчик
-            P.printed_slide-text Я пригласила ребят, чтобы переклеить обои в кухне и коридоре, выложить плиткой "фартук" и полностью отремонтировать ванную. Порадовала скромная сумма сметы и быстрые сроки - не мусолили полгода, а сделали всего за 3 недели. Спасибо "Флагману ремонта"!
+              img.rounded-circle(data-lazy='upload/review/zuev.jpg', alt='photo')
+              p
+                | Игорь Зуев
+                br
+                span заказчик
+            p.printed_slide-text
+              | Супруга пожелала обновить гостиную. Пригласили мастеров из вашей компании. Они к делу подошли серьезно: подровняли стены, перестелили пол по технологии. В результате их трудов получилось светло и свежо. Нам нравится. Спасибо!
     .reviews_footer.d-lg-flex.justify-content-lg-center.align-items-lg-center
-      SPAN.reviews_footer-title.mb-lg-0 Флагман Ремонта на сайтах-отзовиках:
-      UL.reviews_footer-list.d-flex.flex-wrap.flex-sm-nowrap.justify-content-sm-center
-        LI.reviews_footer-item
-          A(href="https://www.yell.ru/moscow/com/flagman-remonta_11886169/" target="_blank").yell
-        LI.reviews_footer-item
-          A(href="http://www.apoi.ru/flagman-remonta" target="_blank").apoi
-        LI.reviews_footer-item
-          A(href="https://otzyvy.pro/category/stroitelstvo-i-remont/162513-flagman-remonta.html" target="_blank").otzyvypro
-        LI.reviews_footer-item
-          A(href="http://ru.otzyv.com/flagman-remonta/" target="_blank").otzyvru
-    
-
-
+      span.reviews_footer-title.mb-lg-0 Флагман Ремонта на сайтах-отзовиках:
+      ul.reviews_footer-list.d-flex.flex-wrap.flex-sm-nowrap.justify-content-sm-center
+        li.reviews_footer-item
+          a.yell(href='https://www.yell.ru/moscow/com/flagman-remonta_11886169/', target='_blank')
+        li.reviews_footer-item
+          a.apoi(href='http://www.apoi.ru/flagman-remonta', target='_blank')
+        li.reviews_footer-item
+          a.otzyvypro(href='https://otzyvy.pro/category/stroitelstvo-i-remont/162513-flagman-remonta.html', target='_blank')
+        li.reviews_footer-item
+          a.otzyvru(href='http://ru.otzyv.com/flagman-remonta/', target='_blank')
 

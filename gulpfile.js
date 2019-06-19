@@ -13,10 +13,12 @@ var gulp = require('gulp'),
 var useref = require('gulp-useref'),
 		gulpif = require('gulp-if'),
 		cssmin = require('gulp-clean-css'),
-		uglify = require('gulp-uglify'),
+		uglify = require('gulp-uglify-es').default,
 		rimraf = require('rimraf'),
 		notify = require('gulp-notify'),
 		ftp = require('vinyl-ftp');
+
+
 
 var paths = {
 			blocks: 'blocks/',

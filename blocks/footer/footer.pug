@@ -1,7 +1,31 @@
 mixin footer()
-  +b.SECTION.footer
-    .container
-      +e.wrap
-        +e.reserved © 2014-2019 All Rights Reserved.
-        +e.A(href="#").cookie-pol Cookie Policy
-        +e.A(href="#").privacy-pol Privacy Policy
+  +b.SECTION(id="footer").footer
+    .footer_t.d-lg-flex.align-items-center.container.p-0
+      ul.col-12.col-lg-8.footer_nav
+        li.footer_nav-item
+          a.footer_nav-link(href='#service', onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_ceny','eNI':'true', 'event': 'UAEvent' });") цены
+        li.footer_nav-item
+          a.footer_nav-link(href='#portfolio', onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_portfolio','eNI':'true', 'event': 'UAEvent' });") портфолио
+        li.footer_nav-item
+          a.footer_nav-link(href='#action', onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_akciya','eNI':'true', 'event': 'UAEvent' });") акция
+        li.footer_nav-item
+          a.footer_nav-link(href='#rassrochka', onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_rassrochka','eNI':'true', 'event': 'UAEvent' });") рассрочка 0%
+        li.footer_nav-item
+          a.footer_nav-link(href='#reviews', onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_otzivy','eNI':'true', 'event': 'UAEvent' });") отзывы
+        li.footer_nav-item
+          a.footer_nav-link(href='#faq', onclick="(dataLayer = window.dataLayer || []).push({ 'eCategory':'navigation', 'eAction':'click', 'eLabel':'menu_ya_kak-zakazat','eNI':'true', 'event': 'UAEvent' });") как заказать
+      .col-12.col-lg-4.footer_social
+        a.footer_social-link(href='https://vk.com/flagmanremonta', target='_blank')
+          span.vk
+        a.footer_social-link(href='https://business.facebook.com/flagmanremonta/', target='_blank')
+          span.fb
+        a.footer_social-link(href='https://www.instagram.com/flagmanremonta/', target='_blank')
+          span.inst
+        a.footer_social-link(href='https://ok.ru/group/55037744775181', target='_blank')
+          span.ok
+    .footer_b.d-md-flex.justify-content-center
+      button.order-md-2(type='button', data-toggle='modal', data-target='#call_polite') Политика конфиденциальности
+      p.footer_b-text.order-md-1
+        | © 
+        span “ФЛАГМАН РЕМОНТА”
+        |  2014-2019. Все права защищены.
